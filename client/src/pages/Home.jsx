@@ -2,8 +2,10 @@ import React from 'react'
 import Hero from '../component/Home/Hero'
 import Features from '../component/Home/Features'
 import Services from '../component/Home/Services'
-import Pricing from '../component/Home/Pricing'
 import Faqs from '../component/Home/Faqs'
+import Streamline from '../component/Home/Streamline'
+import Guide from '../component/Home/Guide'
+import Contact from '../component/Home/Contact'
 
 const Home = () => {
   return (
@@ -12,8 +14,10 @@ const Home = () => {
         <Hero />
         <Features />
         <Services />
-        <Pricing />
+        <Streamline />
+        <Guide />
         <Faqs />
+        <Contact />
       </div>
     </>
   )

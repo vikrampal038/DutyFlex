@@ -4,24 +4,25 @@ import { ServiceData } from "../../data/ServiceData";
 const Services = () => {
   return (
     <>
-      <div className=" pt-14 w-full flex justify-center">
-        <div className=" w-full gap-14 flex flex-col justify-center items-center">
+      <div className="pt-14 w-full flex justify-center ">
+        <div className="w-full  gap-14 flex flex-col justify-center items-center">
           {/* For Heading */}
-          <div className="flex flex-col justify-center gap-4 items-center w-[60%] px-15">
-            <h1 className="tracking-wide text-[16px] font-bold font-gilroy">
+          <div className="flex flex-col justify-center gap-4 items-center w-full sm:w-[80%] md:w-full lg:w-[60%] px-4 sm:px-10">
+            <h1 className="tracking-wide text-[16px] font-bold font-gilroy text-center">
               Our Services
             </h1>
-            <h2 className="font-manrope tracking-tight text-[40px] text-center font-bold">
+
+            <h2 className="font-manrope w-[70%] tracking-tight text-[#201C44] text-[24px] sm:text-[28px] md:text-[35px] lg:text-[40px] text-center font-bold leading-snug">
               Save Time Managing Your Business With Our Best Services
             </h2>
           </div>
 
-          {/* For All Details */}
-          <div className=" w-full grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5 gap-8  ">
+          {/* All Details */}
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 sm:gap-8">
             {ServiceData.map((item) => (
               <div
                 key={item.title}
-                className=" border border-[#E7E7E7] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex  flex-col gap-5 py-9 px-6"
+                className=" border w-full  h-auto sm:h-48 md:h-50 lg:h-50 xl:h-50 2xl:h-50 border-[#E7E7E7] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-5 py-9 px-3 "
               >
                 <div className="flex justify-start flex-col gap-2.5">
                   <div className="w-10 h-10 items-center flex justify-center rounded-md bg-[#ECECEC]">
@@ -32,11 +33,11 @@ const Services = () => {
                     />
                   </div>
 
-                  <h3 className="text-[20px] font-bold tracking-wide text-start  text-[#000000]">
+                  <h3 className="text-[18px] sm:text-[20px] font-bold tracking-wide text-start text-[#000000]">
                     {item.title}
                   </h3>
 
-                  <p className="text-[12px] font-medium text-[#757095] tracking-wider">
+                  <p className="text-[12px] sm:text-[13px] md:text-[14px] font-medium text-[#757095] tracking-wider">
                     {item.detail}
                   </p>
                 </div>

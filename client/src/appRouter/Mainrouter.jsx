@@ -5,8 +5,8 @@ import Platform from '../pages/Platform'
 import Solutions from '../pages/Solutions'
 import Resources from '../pages/Resources'
 import Pricing from '../pages/Pricing'
-import Login from '../component/Accounts/Login'
-import Register from '../component/Accounts/Register'
+// import Login from '../component/Accounts/Login'
+// import Register from '../component/Accounts/Register'
 import Accounts from '../component/Accounts/Accounts'
 import FeaturesDetails from '../pages/FeaturesDetails'
 
@@ -20,8 +20,8 @@ const Mainrouter = () => {
           <Route path='/solutions' element={<Solutions />} />
           <Route path='/resources' element={<Resources />} />
           <Route path='/pricing' element={<Pricing />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
+          {/* <Route path='/login' element={<Login />} /> */}
+          {/* <Route path='/register' element={<Register />} /> */}
           <Route path='/accounts/:page' element={<Accounts />} />
           <Route path='/detail/:id' element={<FeaturesDetails />} />
           

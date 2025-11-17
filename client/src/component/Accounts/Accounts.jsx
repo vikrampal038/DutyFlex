@@ -7,6 +7,7 @@ const Accounts = () => {
   return (
     <div>
         <h1>this is account page </h1>
+        <h1>this is login page </h1>
       {page=="register" && <h1>
         
         this is Regsiter  page</h1>}
