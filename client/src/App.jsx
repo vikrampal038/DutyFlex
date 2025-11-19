@@ -2,6 +2,7 @@ import React from "react";
 import Mainrouter from "./appRouter/Mainrouter";
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
+import { Button } from "./components/ui/button";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Navbar />
         <Mainrouter />
         <Footer />
+       <Button>Vikram Pal</Button>
       </div>
     </>
   );
