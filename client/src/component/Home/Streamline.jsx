@@ -1,130 +1,59 @@
 import React from "react";
-// import { StreamlineData } from "../../data/StreamlineData";
+import { StreamlineData } from "../../data/StreamlineData";
 import { NavLink } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa6";
 const Streamline = () => {
   return (
-    <div className="py-14 flex flex-col justify-center items-center w-full">
-      <div className=" flex justify-center items-center w-[80%]">
+    <div className="py-14 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
+      <div className="w-[90%] flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
         {/* For Details Section */}
-        <div className="flex flex-col items-start gap-[25px]">
-          <h1 className="font-jakarta text-[32px] w-[60%] font-bold text-[#201C44]">
+        <div className="flex flex-col justify-start items-start gap-[25px] w-full lg:w-1/2">
+          <h1 className="font-jakarta text-[26px] sm:text-[28px] md:text-[32px] w-full font-bold text-[#201C44] leading-tight">
             Streamline your implementation with our guided process
           </h1>
+
           <div className="flex flex-col gap-[13px]">
-            {/* List 1 */}
-            <div className="flex gap-3 items-center">
-              <div className=" flex justify-center items-center w-[50] py-3 rounded-md px-3 h-[50] bg-[#FAE0E1]">
-                <img
-                  src="/Assets/Streamline/Tick Square.png"
-                  alt="tick icon"
-                  className="text-[#131126] w-6 h-6"
-                />
-              </div>
-              <h3 className="font-normal text-[16px] font-jakarta text-[#201C44]">
-                Sales onboarding & requirement collection
-              </h3>
-            </div>
+            {StreamlineData.map((item, index) => (
+              <div key={index} className="flex gap-3 items-center">
+                <div className="flex justify-center items-center w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] py-3 rounded-md px-3 bg-[#FAE0E1]">
+                  <img
+                    src={item.image}
+                    alt="tick icon"
+                    className="text-[#131126] w-5 h-5 sm:w-6 sm:h-6"
+                  />
+                </div>
 
-            {/* List 2 */}
-            <div className="flex gap-3 items-center">
-              <div className=" flex justify-center items-center w-[50] py-3 rounded-md px-3 h-[50] bg-[#FAE0E1]">
-                <img
-                  src="/Assets/Streamline/Tick Square.png"
-                  alt="tick icon"
-                  className="text-[#131126] w-6 h-6"
-                />
+                <h3 className="font-normal text-[14px] sm:text-[16px] font-jakarta text-[#201C44] leading-snug">
+                  {item.title}
+                </h3>
               </div>
-              <h3 className="font-normal text-[16px] font-jakarta text-[#201C44]">
-                Platform & client configuration
-              </h3>
-            </div>
-
-            {/* List 3 */}
-            <div className="flex gap-3 items-center">
-              <div className=" flex justify-center items-center w-[50] py-3 rounded-md px-3 h-[50] bg-[#FAE0E1]">
-                <img
-                  src="/Assets/Streamline/Tick Square.png"
-                  alt="tick icon"
-                  className="text-[#131126] w-6 h-6"
-                />
-              </div>
-              <h3 className="font-normal text-[16px] font-jakarta text-[#201C44]">
-                User import & credential setup
-              </h3>
-            </div>
-
-            {/* List 4 */}
-            <div className="flex gap-3 items-center">
-              <div className=" flex justify-center items-center w-[50] py-3 rounded-md px-3 h-[50] bg-[#FAE0E1]">
-                <img
-                  src="/Assets/Streamline/Tick Square.png"
-                  alt="tick icon"
-                  className="text-[#131126] w-6 h-6"
-                />
-              </div>
-              <h3 className="font-normal text-[16px] font-jakarta text-[#201C44]">
-                Rate cards & invoice rules configuration
-              </h3>
-            </div>
-
-            {/* List 5*/}
-            <div className="flex gap-3 items-center">
-              <div className=" flex justify-center items-center w-[50] py-3 rounded-md px-3 h-[50] bg-[#FAE0E1]">
-                <img
-                  src="/Assets/Streamline/Tick Square.png"
-                  alt="tick icon"
-                  className="text-[#131126] w-6 h-6"
-                />
-              </div>
-              <h3 className="font-normal text-[16px] font-jakarta text-[#201C44]">
-                Training for admins, supervisors & guards
-              </h3>
-            </div>
-
-            {/* List 6 */}
-            <div className="flex gap-3 items-center">
-              <div className=" flex justify-center items-center w-[50] py-3 rounded-md px-3 h-[50] bg-[#FAE0E1]">
-                <img
-                  src="/Assets/Streamline/Tick Square.png"
-                  alt="tick icon"
-                  className="text-[#131126] w-6 h-6"
-                />
-              </div>
-              <h3 className="font-normal text-[16px] font-jakarta text-[#201C44]">
-                Pilot rollout followed by full go-live
-              </h3>
-            </div>
-
-            {/* List 7 */}
-            <div className="flex gap-3 items-center">
-              <div className=" flex justify-center items-center w-[50] py-3 rounded-md px-3 h-[50] bg-[#FAE0E1]">
-                <img
-                  src="/Assets/Streamline/Tick Square.png"
-                  alt="tick icon"
-                  className="text-[#131126] w-6 h-6"
-                />
-              </div>
-              <h3 className="font-normal text-[16px] font-jakarta text-[#201C44]">
-                Review & optimization
-              </h3>
-            </div>
+            ))}
           </div>
+
           <NavLink
             to="/"
-            className="bg-[#FAE0E1] flex gap-2 justify-center items-center py-4 px-6"
+            className="bg-[#FAE0E1] flex gap-2 justify-center items-center py-3 sm:py-4 px-6 mt-4 w-full sm:w-auto"
           >
-            <button className="text-[#131126] text-[16px] font-bold font-jakarta tracking-wide">
+            <button className="text-[#131126] text-[14px] sm:text-[16px] font-bold font-jakarta tracking-wide">
               Start Your Implemntation
             </button>
-            <FaChevronRight className="w-[18px] h-[18px]" />
+            <FaChevronRight className="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px]" />
           </NavLink>
         </div>
 
         {/* for Image section */}
-        <div className=" relative flex justify-center items-center">
-          <img className="absolute bottom-115 left-132" src="/Assets/Streamline/Group.png" alt="stramline logo" />
-          <img className="block" src="/Assets/Streamline/image 20.png" alt="streamline image" />
+        <div className="relative flex justify-center items-center w-full lg:w-1/2 mt-10">
+          <img
+            className="absolute bottom-75 sm:bottom-103 md:bottom-120 lg:bottom-120 left-85 sm:left-115 md:left-133 lg:left-160 w-[60px] sm:w-20 md:w-[105px]"
+            src="/Assets/Streamline/Group.png"
+            alt="stramline logo"
+          />
+
+          <img
+            className=" w-full sm:w-[550px] md:w-[650px] lg:w-[600px] h-auto"
+            src="Assets/Streamline/image 20.png"
+            alt="streamline image"
+          />
         </div>
       </div>
     </div>

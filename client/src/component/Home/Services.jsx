@@ -19,9 +19,9 @@ const Services = () => {
 
           {/* All Details */}
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 sm:gap-8">
-            {ServiceData.map((item) => (
+            {ServiceData.map((item, index) => (
               <div
-                key={item.title}
+                key={index}
                 className=" border w-full  h-auto sm:h-48 md:h-50 lg:h-50 xl:h-50 2xl:h-50 border-[#E7E7E7] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-5 py-9 px-3 "
               >
                 <div className="flex justify-start flex-col gap-2.5">
