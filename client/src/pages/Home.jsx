@@ -1,11 +1,12 @@
 import React from 'react'
-import Hero from '../component/Home/Hero'
-import Features from '../component/Home/Features'
-import Services from '../component/Home/Services'
-import Faqs from '../component/Home/Faqs'
-import Streamline from '../component/Home/Streamline'
-import Guide from '../component/Home/Guide'
-import Contact from '../component/Home/Contact'
+import Hero from '../components/Home/Hero'
+import Features from '../components/Home/Features'
+import Services from '../components/Home/Services'
+import Faqs from '../components/Home/Faqs.jsx'
+import Streamline from '../components/Home/Streamline'
+import Guide from '../components/Home/Guide'
+// import Accordion from '../components/Home/Faqs/Accordion.jsx'
+import ContactForm from '../components/Home/ContactForm.jsx'
 
 const Home = () => {
   return (
@@ -17,7 +18,8 @@ const Home = () => {
         <Streamline />
         <Guide />
         <Faqs />
-        <Contact />
+        {/* <Accordion /> */}
+        <ContactForm />
       </div>
     </>
   )

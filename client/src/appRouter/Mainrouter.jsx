@@ -1,13 +1,10 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Home from '../pages/Home'
-import Platform from '../pages/Platform'
-import Solutions from '../pages/Solutions'
-import Resources from '../pages/Resources'
-import Pricing from '../pages/Pricing'
-// import Login from '../components/Accounts/Login'
-// import Register from '../components/Accounts/Register'
-import Accounts from '../components/Accounts/Accounts'
+// import Platform from '../pages/Platform'
+// import Solutions from '../pages/Solutions'
+// import Resources from '../pages/Resources'
+// import Pricing from '../pages/Pricing'
 import FeaturesDetails from '../pages/FeaturesDetails'
 
 const Mainrouter = () => {
@@ -16,16 +13,11 @@ const Mainrouter = () => {
       <div>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/platform' element={<Platform />} />
+          {/* <Route path='/platform' element={<Platform />} />
           <Route path='/solutions' element={<Solutions />} />
           <Route path='/resources' element={<Resources />} />
-          <Route path='/pricing' element={<Pricing />} />
-          {/* <Route path='/login' element={<Login />} /> */}
-          {/* <Route path='/register' element={<Register />} /> */}
-          <Route path='/accounts/:page' element={<Accounts />} />
+          <Route path='/pricing' element={<Pricing />} /> */}
           <Route path='/detail/:id' element={<FeaturesDetails />} />
-          
-
         </Routes>
       </div>
     </>
