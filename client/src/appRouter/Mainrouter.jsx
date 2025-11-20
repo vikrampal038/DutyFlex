@@ -5,9 +5,9 @@ import Platform from '../pages/Platform'
 import Solutions from '../pages/Solutions'
 import Resources from '../pages/Resources'
 import Pricing from '../pages/Pricing'
-// import Login from '../component/Accounts/Login'
-// import Register from '../component/Accounts/Register'
-import Accounts from '../component/Accounts/Accounts'
+// import Login from '../components/Accounts/Login'
+// import Register from '../components/Accounts/Register'
+import Accounts from '../components/Accounts/Accounts'
 import FeaturesDetails from '../pages/FeaturesDetails'
 
 const Mainrouter = () => {

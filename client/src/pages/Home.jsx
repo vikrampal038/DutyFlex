@@ -5,7 +5,7 @@ import Services from '../component/Home/Services'
 import Faqs from '../component/Home/Faqs'
 import Streamline from '../component/Home/Streamline'
 import Guide from '../component/Home/Guide'
-import ContactForm from '../component/Home/ContactForm'
+import Contact from '../component/Home/Contact'
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
         <Streamline />
         <Guide />
         <Faqs />
-        <ContactForm />
+        <Contact />
       </div>
     </>
   )
