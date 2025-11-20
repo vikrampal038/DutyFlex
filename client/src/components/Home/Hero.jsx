@@ -4,7 +4,7 @@ import { FaChevronRight } from "react-icons/fa";
 const Hero = () => {
   return (
     <div
-      className="flex flex-col justify-center items-center gap-5 
+      className="flex flex-col justify-center items-center gap-8 
   max-xl:px-8 max-lg:px-6 max-md:px-4 max-sm:px-2"
     >
       {/* for hero Details */}
@@ -14,12 +14,12 @@ const Hero = () => {
       >
         {/* for Details Section */}
         <div
-          className="w-1/2 flex flex-col gap-15 
-      max-lg:w-full max-md:gap-10 max-sm:gap-8"
+          className="w-1/2 flex flex-col gap-8 
+      max-lg:w-full max-md:gap-8 max-sm:gap-6"
         >
           {/* Heading + Para */}
           <div
-            className="flex flex-col justify-start items-start gap-15
+            className="flex flex-col justify-start items-start gap-8
         max-md:gap-8 max-sm:gap-5"
           >
             <h1

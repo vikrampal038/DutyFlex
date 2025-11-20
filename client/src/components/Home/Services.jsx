@@ -33,7 +33,7 @@ const Services = () => {
 
   return (
     <>
-      <div className="pt-14 w-full flex justify-center ">
+      <div className="pt-16 w-full flex justify-center ">
         <div className="w-full  gap-14 flex flex-col justify-center items-center">
           {/* For Heading */}
           <div className="flex flex-col justify-center gap-4 items-center w-full sm:w-[80%] md:w-full lg:w-[60%] px-4 sm:px-10">

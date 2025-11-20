@@ -87,7 +87,7 @@ export  function ContactForm() {
   };
 
   return (
-    <div className="w-full py-14 flex justify-center items-center">
+    <div className=" pt-16 w-full  flex justify-center items-center">
       <div className="w-[95%] md:w-[80%] lg:w-[65%] flex flex-col lg:flex-row justify-center items-center gap-10">
         {/* Contact details */}
         <div className="w-full lg:w-1/2">

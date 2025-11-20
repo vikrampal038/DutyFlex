@@ -36,7 +36,7 @@ const StreamlineData = [
 ];
 
   return (
-    <div className="py-14 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
+    <div className=" py-16 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
       <div className="w-[90%] flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
         {/* For Details Section */}
         <div className="flex flex-col justify-start items-start gap-[25px] w-full lg:w-1/2">

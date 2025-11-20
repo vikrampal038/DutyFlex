@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <>
+
       <div className="w-full flex justify-center items-center">
         <div className="py-3 w-full">
           {/* Navbar */}
@@ -151,7 +151,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

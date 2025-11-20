@@ -3,7 +3,7 @@ import React from "react";
 const Heading = () => {
   return (
     <div
-      className="pt-8 flex justify-center items-center 
+      className="pt-16 flex justify-center items-center 
   max-xl:px-8 max-lg:px-6 max-md:px-4 max-sm:px-2"
     >
       <div

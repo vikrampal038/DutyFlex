@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const Features = () => {
   return (
     <>
-      <div className="pt-14 w-full flex justify-center">
+      <div className=" pt-16 w-full flex justify-center">
         <div className="w-full flex justify-center items-center gap-14 flex-col">
           {/* for Heading */}
           <div className="text-center">

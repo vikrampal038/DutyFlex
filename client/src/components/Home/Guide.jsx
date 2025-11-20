@@ -3,7 +3,7 @@ import { GuideData } from "../../data/GuideData";
 
 const Guide = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-[#3C367905] px-4 sm:px-6 lg:px-12">
+    <div className=" flex flex-col justify-center items-center bg-[#3C367905] px-4 sm:px-6 lg:px-12">
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
         {/* for Mobile Image  */}
         <div className="w-full flex justify-center items-center lg:w-1/3">
