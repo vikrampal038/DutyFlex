@@ -9,7 +9,7 @@ const Navbar = () => {
           {/* For Logo Section */}
           <div className="w-[20%] flex justify-start">
             <NavLink
-              to="/home"
+              to="/"
               className={({ isActive }) =>
                 `group relative inline-block font-jakarta tracking-wider font-bold text-[20px] text-center align-start  ${
                   isActive ? "text-[#201C44] " : "text-black "
@@ -111,8 +111,9 @@ const Navbar = () => {
           {/* For Sign Up Button */}
           <div className="w-[10%] items-center flex justify-center">
             <NavLink
-            to="/accounts/login"
-            className="text-center font-jakarta font-bold text-[16px] px-2 py-3  w-[80%] rounded-md bg-[#FAE0E1]">
+              to="/accounts/login"
+              className="text-center font-jakarta font-bold text-[16px] px-2 py-3  hover:bg-[#201C44] hover:text-white transition-all duration-1400  w-[80%] rounded-md bg-[#FAE0E1]"
+            >
               Login
             </NavLink>
           </div>

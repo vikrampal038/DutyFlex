@@ -67,7 +67,7 @@ const StreamlineData = [
             className="bg-[#FAE0E1] flex gap-2 justify-center items-center py-3 sm:py-4 px-6 mt-4 w-full sm:w-auto"
           >
             <button className="text-[#131126] text-[14px] sm:text-[16px] font-bold font-jakarta tracking-wide">
-              Start Your Implemntation
+              Start Your Implementation
             </button>
             <FaChevronRight className="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px]" />
           </NavLink>

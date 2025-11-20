@@ -64,7 +64,7 @@ const MyAccordion = () => {
       <Accordion
         type="single"
         collapsible
-        className="w-[65%] text-center flex flex-col justify-center items-center gap-3"
+        className="w-full xl:w-[70%]  text-center flex flex-col justify-center items-center gap-3"
         defaultValue="item-1"
       >
         {AccordionData.map((item, index) => (
@@ -77,10 +77,10 @@ const MyAccordion = () => {
               {item.title}
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-6 py-5 text-center px-10 bg-white">
-              <p className="text-[16px] font-normal font-Jakarta text-[#131126] leading-6 text-start">
+              <p className="text-[15px] font-medium font-Jakarta text-[#131126] leading-6 text-start">
                 {item.description}
               </p>
-              <p className="text-[16px] font-normal font-Jakarta text-[#131126] leading-5 text-start">
+              <p className="text-[15px] font-medium font-Jakarta text-[#131126] leading-5 text-start">
                 {item.description1}
               </p>
             </AccordionContent>
