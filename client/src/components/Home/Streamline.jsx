@@ -1,8 +1,40 @@
 import React from "react";
-import { StreamlineData } from "../../data/StreamlineData";
 import { NavLink } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa6";
 const Streamline = () => {
+
+  // for Data 
+const StreamlineData = [
+  {
+    image: "/Assets/Streamline/Tick Square.png",
+    title: "Sales onboarding & requirement collection",
+  },
+  {
+    image: "/Assets/Streamline/Tick Square.png",
+    title: "Platform & client configuration",
+  },
+  {
+    image: "/Assets/Streamline/Tick Square.png",
+    title: "User import & credential setup",
+  },
+  {
+    image: "/Assets/Streamline/Tick Square.png",
+    title: "Rate cards & invoice rules configuration",
+  },
+  {
+    image: "/Assets/Streamline/Tick Square.png",
+    title: "Training for admins, supervisors & guards",
+  },
+  {
+    image: "/Assets/Streamline/Tick Square.png",
+    title: "Pilot rollout followed by full go-live",
+  },
+  {
+    image: "/Assets/Streamline/Tick Square.png",
+    title: "Review & optimization",
+  },
+];
+
   return (
     <div className="py-14 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
       <div className="w-[90%] flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">

@@ -2,10 +2,10 @@ import React from 'react'
 import Hero from '../components/Home/Hero'
 import Features from '../components/Home/Features'
 import Services from '../components/Home/Services'
-import Faqs from '../components/Home/Faqs.jsx'
+import Faqs from '../components/Home/Faqs/Faqs.jsx'
 import Streamline from '../components/Home/Streamline'
 import Guide from '../components/Home/Guide'
-// import Accordion from '../components/Home/Faqs/Accordion.jsx'
+import MyAccordion from '../components/Home/Faqs/Accordion.jsx'
 import ContactForm from '../components/Home/ContactForm.jsx'
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
         <Streamline />
         <Guide />
         <Faqs />
-        {/* <Accordion /> */}
+        <MyAccordion />
         <ContactForm />
       </div>
     </>

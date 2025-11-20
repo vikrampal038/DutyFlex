@@ -2,7 +2,9 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
 // Initialize EmailJS (correct position)
-emailjs.init("wP9g3vuBVm1TPyfRX");
+emailjs.init({
+  publicKey: "wP9g3vuBVm1TPyfRX",
+});
 
 export  function ContactForm() {
   const [name, setName] = useState("");

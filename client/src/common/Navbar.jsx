@@ -111,7 +111,7 @@ const Navbar = () => {
           {/* For Sign Up Button */}
           <div className="w-[10%] items-center flex justify-center">
             <NavLink
-            to="/"
+            to="/accounts/login"
             className="text-center font-jakarta font-bold text-[16px] px-2 py-3  w-[80%] rounded-md bg-[#FAE0E1]">
               Login
             </NavLink>
