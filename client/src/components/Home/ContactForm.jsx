@@ -87,13 +87,13 @@ export  function ContactForm() {
   };
 
   return (
-    <div className=" pt-16 w-full  flex justify-center items-center">
-      <div className="w-[95%] md:w-[80%] lg:w-[65%] flex flex-col lg:flex-row justify-center items-center gap-10">
+    <div className=" pt-18 w-full  flex justify-center items-center">
+      <div className="w-[95%] md:w-[80%] lg:w-[75%] flex flex-col lg:flex-row justify-center items-center gap-10">
         {/* Contact details */}
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col gap-8">
             <div className="bg-[#A1A1A1] w-[87px] h-[87px] flex justify-center items-center rounded-full">
-              <img src="/Assets/Contact/Path.png" alt="contact icon" />
+              <img src="/Assets/All Images/Path.png" alt="contact icon" />
             </div>
 
             <div className="flex flex-col justify-center items-start gap-5">
@@ -109,10 +109,10 @@ export  function ContactForm() {
         </div>
 
         {/* Form */}
-        <div className="w-full lg:w-1/2 p-1 flex justify-center items-center">
+        <div className=" lg:w-1/2 p-1 flex justify-center items-center">
           <form
             onSubmit={handleSubmit}
-            className="border border-[#E7E9ED] rounded-xl p-5 w-full"
+            className="border border-[#E7E9ED] rounded-xl p-5 w-[70%]"
           >
             <div className="flex flex-col justify-center items-center gap-3">
               {/* Name */}

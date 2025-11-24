@@ -42,13 +42,13 @@ const Hero = () => {
           {/* Button Section */}
           <div
             className="flex justify-start items-center gap-5 
-        max-md:flex-wrap max-md:gap-4 max-sm:gap-3"
+            max-md:flex-wrap max-md:gap-4 max-sm:gap-3"
           >
             {/* Contact Now */}
             <button
               className="text-center font-jakarta font-bold text-[16px] px-6 py-4 rounded-sm bg-[#FAE0E1]
-          hover:bg-[#201C44] hover:text-white transition-all duration-1400
-          max-md:px-5 max-md:py-3 max-sm:px-4 max-sm:py-2"
+            hover:bg-[#201C44] hover:text-white transition-all duration-1400
+              max-md:px-5 max-md:py-3 max-sm:px-4 max-sm:py-2"
             >
               Contact Now
             </button>
@@ -77,11 +77,11 @@ const Hero = () => {
         <div className="flex justify-end items-center max-lg:justify-center max-lg:w-full">
           <img
             className="inline-block w-[620px] h-[515px]
-        max-xl:w-[520px] max-xl:h-[440px]
-        max-lg:w-[850px] max-lg:h-[500px]
-        max-md:w-[700px] max-md:h-[450px]
-        max-sm:w-[450px] max-sm:h-[400px]"
-            src="/Assets/Hero/image 19.png"
+            max-xl:w-[520px] max-xl:h-[440px]
+            max-lg:w-[850px] max-lg:h-[500px]
+            max-md:w-[700px] max-md:h-[450px]
+            max-sm:w-[450px] max-sm:h-[400px]"
+            src="/Assets/All Images/image 19.png"
             alt="hero section img"
           />
         </div>
@@ -111,7 +111,7 @@ const Hero = () => {
           >
             <img
               className="w-[25px] h-[25px] max-sm:w-[20px] max-sm:h-[20px]"
-              src="/Assets/Streamline/Tick Square.png"
+              src="/Assets/All Images/Tick Square.png"
               alt="serviceIcon"
             />
           </div>
@@ -139,7 +139,7 @@ const Hero = () => {
           >
             <img
               className="w-[25px] h-[25px] max-sm:w-[20px] max-sm:h-[20px]"
-              src="/Assets/Streamline/Time Circle.png"
+              src="/Assets/All Images/Time Circle.png"
               alt="serviceIcon"
             />
           </div>
@@ -155,7 +155,7 @@ const Hero = () => {
         {/* Service 3 */}
         <div
           className="flex justify-between items-center gap-3
-      max-md:gap-4 max-sm:gap-3 max-lg:flex-col max-lg:text-center"
+          max-md:gap-4 max-sm:gap-3 max-lg:flex-col max-lg:text-center"
         >
           <div
             className="w-[50px] h-[50px] rounded-sm bg-[#CBCFFA] flex justify-center items-center
@@ -167,16 +167,16 @@ const Hero = () => {
           >
             <img
               className="w-[25px] h-[25px] max-sm:w-[20px] max-sm:h-[20px]"
-              src="/Assets/Streamline/Upload.png"
+              src="/Assets/All Images/Upload.png"
               alt="serviceIcon"
             />
           </div>
 
           <h2
             className="text-16 w-60 font-Jakarta  font-normal leading-5 tracking-wider text-white
-        max-lg:w-full max-md:text-[14px]"
+            max-lg:w-full max-md:text-[14px]"
           >
-            Super useful and easy to with over 100+ customisations!
+            Super useful and easy to with over 100+ customizations!
           </h2>
         </div>
       </div>

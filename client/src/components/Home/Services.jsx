@@ -4,27 +4,27 @@ const Services = () => {
   // for Data
   const ServiceData = [
     {
-      image: "/Assets/Services/ui-checks-grid.png",
+      image: "/Assets/All Images/ui-checks-grid.png",
       title: "SaaS Subscription",
       detail: "Dutyflex platform access with updates and support.",
     },
     {
-      image: "/Assets/Services/ui-checks-grid.png",
+      image: "/Assets/All Images/ui-checks-grid.png",
       title: "SaaS Subscription",
       detail: "Dutyflex platform access with updates and support.",
     },
     {
-      image: "/Assets/Services/ui-checks-grid.png",
+      image: "/Assets/All Images/ui-checks-grid.png",
       title: "SaaS Subscription",
       detail: "Dutyflex platform access with updates and support.",
     },
     {
-      image: "/Assets/Services/ui-checks-grid.png",
+      image: "/Assets/All Images/ui-checks-grid.png",
       title: "SaaS Subscription",
       detail: "Dutyflex platform access with updates and support.",
     },
     {
-      image: "/Assets/Services/ui-checks-grid.png",
+      image: "/Assets/All Images/ui-checks-grid.png",
       title: "SaaS Subscription",
       detail: "Dutyflex platform access with updates and support.",
     },
@@ -33,15 +33,15 @@ const Services = () => {
 
   return (
     <>
-      <div className="pt-16 w-full flex justify-center ">
+      <div className="pt-18 w-full flex justify-center ">
         <div className="w-full  gap-14 flex flex-col justify-center items-center">
           {/* For Heading */}
-          <div className="flex flex-col justify-center gap-4 items-center w-full sm:w-[80%] md:w-full lg:w-[60%] px-4 sm:px-10">
+          <div className="flex flex-col justify-center gap-3 items-center w-full sm:w-[80%] md:w-full lg:w-[60%] px-4 sm:px-10">
             <h1 className="tracking-wide text-[16px] font-bold font-gilroy text-center">
               Our Services
             </h1>
 
-            <h2 className="font-manrope w-[70%] tracking-tight text-[#201C44] text-[24px] sm:text-[28px] md:text-[35px] lg:text-[40px] text-center font-bold leading-snug">
+            <h2 className="font-manrope w-full tracking-tight text-[#201C44] text-[24px] sm:text-[28px] md:text-[35px] lg:text-[40px] text-center font-bold leading-snug">
               Save Time Managing Your Business With Our Best Services
             </h2>
           </div>

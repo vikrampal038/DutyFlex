@@ -3,7 +3,7 @@ import React from "react";
 const Heading = () => {
   return (
     <div
-      className="pt-16 flex justify-center items-center 
+      className="pt-18 flex justify-center items-center 
   max-xl:px-8 max-lg:px-6 max-md:px-4 max-sm:px-2"
     >
       <div
@@ -13,7 +13,7 @@ const Heading = () => {
         {/* Heading Section */}
         <div className="w-full flex flex-col justify-center items-center gap-3">
           <img
-            src="/Assets/Faq/Icon.png"
+            src="/Assets/All Images/Icon.png"
             alt="faq heading"
             className="max-md:w-[70px] max-sm:w-[55px]"
           />
@@ -38,12 +38,6 @@ const Heading = () => {
             </h2>
           </div>
         </div>
-
-        {/* Details Section */}
-        <div
-          className="w-full 
-      max-md:px-4 max-sm:px-2"
-        ></div>
       </div>
     </div>
   );

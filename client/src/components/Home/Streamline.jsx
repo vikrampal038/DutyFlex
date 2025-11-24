@@ -1,43 +1,43 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa6";
-const Streamline = () => {
 
-  // for Data 
-const StreamlineData = [
-  {
-    image: "/Assets/Streamline/Tick Square.png",
-    title: "Sales onboarding & requirement collection",
-  },
-  {
-    image: "/Assets/Streamline/Tick Square.png",
-    title: "Platform & client configuration",
-  },
-  {
-    image: "/Assets/Streamline/Tick Square.png",
-    title: "User import & credential setup",
-  },
-  {
-    image: "/Assets/Streamline/Tick Square.png",
-    title: "Rate cards & invoice rules configuration",
-  },
-  {
-    image: "/Assets/Streamline/Tick Square.png",
-    title: "Training for admins, supervisors & guards",
-  },
-  {
-    image: "/Assets/Streamline/Tick Square.png",
-    title: "Pilot rollout followed by full go-live",
-  },
-  {
-    image: "/Assets/Streamline/Tick Square.png",
-    title: "Review & optimization",
-  },
-];
+const Streamline = () => {
+  // for Data
+  const StreamlineData = [
+    {
+      image: "/Assets/All Images/Tick Square.png",
+      title: "Sales onboarding & requirement collection",
+    },
+    {
+      image: "/Assets/All Images/Tick Square.png",
+      title: "Platform & client configuration",
+    },
+    {
+      image: "/Assets/All Images/Tick Square.png",
+      title: "User import & credential setup",
+    },
+    {
+      image: "/Assets/All Images/Tick Square.png",
+      title: "Rate cards & invoice rules configuration",
+    },
+    {
+      image: "/Assets/All Images/Tick Square.png",
+      title: "Training for admins, supervisors & guards",
+    },
+    {
+      image: "/Assets/All Images/Tick Square.png",
+      title: "Pilot rollout followed by full go-live",
+    },
+    {
+      image: "/Assets/All Images/Tick Square.png",
+      title: "Review & optimization",
+    },
+  ];
 
   return (
-    <div className=" py-16 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
-      <div className="w-[90%] flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
+    <div className=" py-18 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
+      <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
         {/* For Details Section */}
         <div className="flex flex-col justify-start items-start gap-[25px] w-full lg:w-1/2">
           <h1 className="font-jakarta text-[26px] sm:text-[28px] md:text-[32px] w-full font-bold text-[#201C44] leading-tight">
@@ -63,13 +63,15 @@ const StreamlineData = [
           </div>
 
           <NavLink
-            to="/"
-            className="bg-[#FAE0E1] flex gap-2 justify-center items-center py-3 sm:py-4 px-6 mt-4 w-full sm:w-auto"
+            to="/#"
+            className=" text-center font-jakarta font-bold text-[16px] rounded-sm bg-[#FAE0E1]
+            hover:bg-[#201C44] hover:text-white transition-all duration-1400
+              max-md:px-5 max-md:py-3 max-sm:px-4 max-sm:py-2 flex gap-2 justify-center items-center py-3 sm:py-4 px-5 mt-4 w-full sm:w-auto"
           >
-            <button className="text-[#131126] text-[14px] sm:text-[16px] font-bold font-jakarta tracking-wide">
+            <button className="text-[14px] sm:text-[16px] font-bold font-jakarta tracking-wide">
               Start Your Implementation
             </button>
-            <FaChevronRight className="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px]" />
+            <FaChevronRight className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
           </NavLink>
         </div>
 
@@ -77,13 +79,13 @@ const StreamlineData = [
         <div className="relative flex justify-center items-center w-full lg:w-1/2 mt-10">
           <img
             className="absolute bottom-75 sm:bottom-103 md:bottom-120 lg:bottom-120 left-85 sm:left-115 md:left-133 lg:left-160 w-[60px] sm:w-20 md:w-[105px]"
-            src="/Assets/Streamline/Group.png"
+            src="/Assets/All Images/Group.png"
             alt="stramline logo"
           />
 
           <img
             className=" w-full sm:w-[550px] md:w-[650px] lg:w-[600px] h-auto"
-            src="Assets/Streamline/image 20.png"
+            src="Assets/All Images/image 20.png"
             alt="streamline image"
           />
         </div>

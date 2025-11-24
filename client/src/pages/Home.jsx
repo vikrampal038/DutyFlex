@@ -5,9 +5,9 @@ import Services from "../components/Home/Services";
 import Heading from "../components/Home/Faqs/Heading.jsx";
 import Streamline from "../components/Home/Streamline";
 import Guide from "../components/Home/Guide";
-import MyAccordion from "../components/Home/Faqs/Accordion.jsx";
+import MyAccordion from "../components/Home/Faqs/MyAccordion.jsx";
 import ContactForm from "../components/Home/ContactForm.jsx";
-
+import ClientPortal from "../components/Home/ClientPortal .jsx";
 const Home = () => {
   return (
     <>
@@ -18,9 +18,10 @@ const Home = () => {
         <Services />
         <Streamline />
         <Guide />
+        <ClientPortal  />
         <Heading />
         <MyAccordion />
-
+        
         {/* Contact section with id */}
         <section id="contact">
           <ContactForm />

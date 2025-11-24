@@ -16,12 +16,12 @@ const Navbar = () => {
                 }`
               }
             >
-              Home/logo
-              {/* <img
-                src="/your-logo.png"
-                alt="Home Logo"
+              {/* Home/logo */}
+              <img
+                src="/Assets/Logo/dutyflex-1.png"
+                alt="Navbar Logo"
                 className="mx-auto h-10 w-auto object-contain"
-              /> */}
+              />
             </NavLink>
           </div>
 
@@ -112,7 +112,7 @@ const Navbar = () => {
           <div className="w-[10%] items-center flex justify-center">
             <NavLink
               to="/accounts/login"
-              className="text-center font-jakarta font-bold text-[16px] px-2 py-3  hover:bg-[#201C44] hover:text-white transition-all duration-1400  w-[80%] rounded-md bg-[#FAE0E1]"
+              className="font-jakarta text-center tracking-wider font-bold text-[16px] px-2 py-3  hover:bg-[#201C44] hover:text-white transition-all duration-1400  w-[80%] rounded-md bg-[#FAE0E1]"
             >
               Login
             </NavLink>

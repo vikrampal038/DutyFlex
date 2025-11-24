@@ -2,35 +2,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
 
-/* Gilroy as a local font - replace paths with your actual font files */
-@font-face {
+/* Gilroy Local Font */
+/* @font-face {
   font-family: "Gilroy";
-  src: url("./fonts/Gilroy-Regular.woff2") format("woff2"),
-    url("./fonts/Gilroy-Regular.woff") format("woff");
+  src: url("/Fonts/Gilroy-Regular.woff2") format("woff2"),
+       url("/Fonts/Gilroy-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("./fonts/Gilroy-Bold.woff2") format("woff2"),
-    url("./fonts/Gilroy-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
+  font-display: swap;
 }
 
-/* Register theme variables for fonts */
-@theme {
+@font-face {
+  font-family: "Gilroy";
+  src: url("/Fonts/Gilroy-Bold.woff2") format("woff2"),
+       url("/Fonts/Gilroy-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+} */
+
+/* GLOBAL CSS VARIABLES */
+:root {
   --manrope: "Manrope", sans-serif;
   --gilroy: "Gilroy", sans-serif;
   --jakarta: "Plus Jakarta Sans", sans-serif;
 }
 
-/* Global body font */
+/* Default body font */
 body {
   font-family: var(--jakarta);
 }
 
-/* Classes for using fonts anywhere */
+/* Utility classes */
 .font-manrope {
   font-family: var(--manrope);
 }
@@ -43,20 +46,6 @@ body {
   font-family: var(--jakarta);
 }
 
-/* global resets */
 * {
   box-sizing: border-box;
 }
-
-html,
-body {
-  background-color: #ffffff;
-  color: black;
-}
-
-/* html {
-  scroll-behavior: smooth;
-}
-#contact {
-  scroll-margin-top: 100px;
-} */
