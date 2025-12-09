@@ -9,7 +9,7 @@ const Hero = () => {
     >
       {/* for hero Details */}
       <div
-        className="flex justify-between items-center 
+        className="flex justify-center items-center 
     max-lg:flex-col max-lg:gap-10 max-md:gap-8 max-sm:gap-6"
       >
         {/* for Details Section */}
@@ -24,7 +24,7 @@ const Hero = () => {
           >
             <h1
               className="text-[54px] font-bold font-Jakarta leading-8 lg:leading-15 text-[#201C44] tracking-wider
-          max-xl:text-[46px] max-lg:text-[40px] max-md:text-[32px] max-sm:text-[26px]"
+          xl:text-[40px] lg:text-[35px] md:text-[30px] sm:text-[25px]"
             >
               Dutyflex is a cloud-based Security Guard Management SaaS platform
             </h1>
@@ -110,14 +110,14 @@ const Hero = () => {
             }}
           >
             <img
-              className="w-[25px] h-[25px] max-sm:w-[20px] max-sm:h-[20px]"
+              className="w-[25px] h-[25px] sm:w-5 sm:h-5"
               src="/Assets/All Images/Tick Square.png"
               alt="serviceIcon"
             />
           </div>
 
           <h2
-            className="text-16 w-10 lg:w-60 font-Jakarta font-normal leading-5 tracking-wider text-white
+            className="text-16 w-10 lg:w-65 font-Jakarta font-normal leading-5 tracking-wider text-white
         max-lg:w-full max-md:text-[14px]"
           >
             Super useful and easy to with over 100+ customisations!
@@ -145,7 +145,7 @@ const Hero = () => {
           </div>
 
           <h2
-            className="text-16 w-60 font-Jakarta  font-normal leading-5 tracking-wider text-white
+            className="text-16 w-65 font-Jakarta  font-normal leading-5 tracking-wider text-white
         max-lg:w-full max-md:text-[14px]"
           >
             Super useful and easy to with over 100+ customisations!
@@ -173,7 +173,7 @@ const Hero = () => {
           </div>
 
           <h2
-            className="text-16 w-60 font-Jakarta  font-normal leading-5 tracking-wider text-white
+            className="text-16 w-65 font-Jakarta  font-normal leading-5 tracking-wider text-white
             max-lg:w-full max-md:text-[14px]"
           >
             Super useful and easy to with over 100+ customizations!

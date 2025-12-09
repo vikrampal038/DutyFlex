@@ -1,12 +1,7 @@
+import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
 
-// Initialize EmailJS (correct position)
-emailjs.init({
-  publicKey: "wP9g3vuBVm1TPyfRX",
-});
-
-export  function ContactForm() {
+export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -14,11 +9,17 @@ export  function ContactForm() {
 
   const [errors, setErrors] = useState({});
 
-  // ---------------- VALIDATION FUNCTION ----------------
+  // ----------- INIT EMAILJS -----------
+  useEffect(() => {
+    emailjs.init("wP9g3vuBVm1TPyfRX");
+  }, []);
+
+  // ----------- VALIDATION -----------
   const validateForm = () => {
     let newErrors = {};
 
     if (!name.trim()) newErrors.name = "Name is required";
+
     if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/))
       newErrors.email = "Enter a valid email";
 
@@ -28,18 +29,14 @@ export  function ContactForm() {
     if (!service) newErrors.service = "Please select a service";
 
     setErrors(newErrors);
-
     return Object.keys(newErrors).length === 0;
   };
 
-  // ---------------- SUBMIT FUNCTION ----------------
+  // ----------- SUBMIT FUNCTION -----------
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!validateForm()) {
-      console.log("Form has errors");
-      return;
-    }
+    if (!validateForm()) return;
 
     const formData = {
       name,
@@ -49,11 +46,10 @@ export  function ContactForm() {
       date: new Date().toLocaleString(),
     };
 
-    // ---------------- SAVE TO LOCAL STORAGE ----------------
+    // Save to localStorage
     localStorage.setItem("contactForm", JSON.stringify(formData));
-    console.log("Form saved to LocalStorage:", formData);
 
-    // ---------------- EMAILJS FUNCTION ----------------
+    // Send Email
     emailjs
       .send(
         "service_1n9880i",
@@ -64,20 +60,16 @@ export  function ContactForm() {
           user_phone: phone,
           user_service: service,
           sender_name: "Duty Flex",
-        },
-        "wP9g3vuBVm1TPyfRX"
+        }
       )
       .then(() => {
         alert("Email Sent Successfully!");
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
         alert("Email sending failed!");
       });
 
-    // --------------------------------------------------
-
-    // RESET FORM
+    // Reset form after submit
     setName("");
     setEmail("");
     setPhone("");
@@ -87,36 +79,37 @@ export  function ContactForm() {
   };
 
   return (
-    <div className=" pt-18 w-full  flex justify-center items-center">
+    <div className="pt-18 w-full flex justify-center items-center">
       <div className="w-[95%] md:w-[80%] lg:w-[75%] flex flex-col lg:flex-row justify-center items-center gap-10">
-        {/* Contact details */}
+
+        {/* Left Side */}
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col gap-8">
             <div className="bg-[#A1A1A1] w-[87px] h-[87px] flex justify-center items-center rounded-full">
               <img src="/Assets/All Images/Path.png" alt="contact icon" />
             </div>
 
-            <div className="flex flex-col justify-center items-start gap-5">
+            <div className="flex flex-col gap-5">
               <h1 className="text-[28px] md:text-[36px] text-black font-bold font-Gilroy leading-10">
                 Get a free consultancy from our expert right now!
               </h1>
               <p className="text-[16px] font-normal font-Gilroy leading-7 text-[#7a7a7a]">
-                With lots of unique blocks, you can easily build a page without
-                coding. Build your next landing page so quickly with Albino.
+                With lots of unique blocks, you can easily build a page without coding.
               </p>
             </div>
           </div>
         </div>
 
         {/* Form */}
-        <div className=" lg:w-1/2 p-1 flex justify-center items-center">
+        <div className="lg:w-1/2 p-1 flex justify-center">
           <form
             onSubmit={handleSubmit}
             className="border border-[#E7E9ED] rounded-xl p-5 w-[70%]"
           >
-            <div className="flex flex-col justify-center items-center gap-3">
+            <div className="flex flex-col gap-3">
+
               {/* Name */}
-              <div className="flex flex-col gap-1 w-full">
+              <div className="flex flex-col gap-1">
                 <label className="text-[#161C2D] text-[15px] font-bold font-Gilroy">
                   Name
                 </label>
@@ -126,17 +119,14 @@ export  function ContactForm() {
                   placeholder="i.e. John Doe"
                   value={name}
                   onChange={(e) => {
-                    if (/^[A-Za-z ]*$/.test(e.target.value))
-                      setName(e.target.value);
+                    if (/^[A-Za-z ]*$/.test(e.target.value)) setName(e.target.value);
                   }}
                 />
-                {errors.name && (
-                  <small className="text-red-600">{errors.name}</small>
-                )}
+                {errors.name && <small className="text-red-600">{errors.name}</small>}
               </div>
 
               {/* Email */}
-              <div className="flex flex-col gap-1 w-full">
+              <div className="flex flex-col gap-1">
                 <label className="text-[#161C2D] text-[15px] font-bold font-Gilroy">
                   Email
                 </label>
@@ -147,13 +137,11 @@ export  function ContactForm() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                {errors.email && (
-                  <small className="text-red-600">{errors.email}</small>
-                )}
+                {errors.email && <small className="text-red-600">{errors.email}</small>}
               </div>
 
               {/* Phone */}
-              <div className="flex flex-col gap-1 w-full">
+              <div className="flex flex-col gap-1">
                 <label className="text-[#161C2D] text-[15px] font-bold font-Gilroy">
                   Phone
                 </label>
@@ -164,17 +152,14 @@ export  function ContactForm() {
                   placeholder="i.e. 1234567890"
                   value={phone}
                   onChange={(e) => {
-                    if (/^\d{0,10}$/.test(e.target.value))
-                      setPhone(e.target.value);
+                    if (/^\d{0,10}$/.test(e.target.value)) setPhone(e.target.value);
                   }}
                 />
-                {errors.phone && (
-                  <small className="text-red-600">{errors.phone}</small>
-                )}
+                {errors.phone && <small className="text-red-600">{errors.phone}</small>}
               </div>
 
               {/* Service */}
-              <div className="flex flex-col gap-1 w-full">
+              <div className="flex flex-col gap-1">
                 <label className="text-[#161C2D] text-[15px] font-bold font-Gilroy">
                   Which service do you need?
                 </label>
@@ -185,11 +170,11 @@ export  function ContactForm() {
                   onChange={(e) => setService(e.target.value)}
                 >
                   <option value="">Select</option>
-                  <option className="text-bold text-xl font-Gilroy">Security Guard</option>
-                  <option className="text-bold text-xl font-Gilroy">Gun Man</option>
-                  <option className="text-bold text-xl font-Gilroy">Body Guard</option>
-                  <option className="text-bold text-xl font-Gilroy">Bouncers</option>
-                  <option className="text-bold text-xl font-Gilroy">House Keeping Staff</option>
+                  <option>Security Guard</option>
+                  <option>Gun Man</option>
+                  <option>Body Guard</option>
+                  <option>Bouncers</option>
+                  <option>House Keeping Staff</option>
                 </select>
 
                 {errors.service && (
@@ -198,21 +183,17 @@ export  function ContactForm() {
               </div>
             </div>
 
-            <div className="flex justify-center items-center mt-5 bg-[#142965] p-3 rounded-lg cursor-pointer">
-              <button
-                className="text-white text-[16px] font-bold font-Gilroy"
-                type="submit"
-              >
+            <div className="flex justify-center mt-5 bg-[#142965] p-3 rounded-lg cursor-pointer">
+              <button className="text-white text-[16px] font-bold font-Gilroy" type="submit">
                 Get Free Consultancy
               </button>
             </div>
           </form>
         </div>
+
       </div>
     </div>
   );
 }
 
 export default ContactForm;
-
-
