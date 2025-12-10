@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className=" w-full bg-[#ffffff] flex justify-between items-center py-2 gap-15">
+      <nav className=" w-full bg-[#ffffff] flex justify-between items-center py-2 border gap-15">
         {/* Logo */}
         <div className="shrink-0 flex items-center">
           <NavLink to="/" className="group inline-block">
@@ -20,7 +20,7 @@ const Navbar = () => {
         </div>
 
         {/* For Desktop Menu  */}
-        <div className="hidden sm:flex items-center mr-auto gap-12 font-semibold text-base list-none text-white">
+        <div className="hidden md:flex items-center w-[80%] gap-12 font-semibold text-base list-none text-white border">
           {[
             { to: "/platform", label: "Platform" },
             { to: "/solutions", label: "Solutions" },
@@ -32,7 +32,7 @@ const Navbar = () => {
               to={item.to}
               className={({ isActive }) =>
                 `font-jakarta tracking-wider font-bold text-[16px] pb-1 transition duration-700 ease-in-out rounded-md ${
-                  isActive ? "text-[#256AF4] " : "text-black "
+                  isActive ? "text-[#0E265E] " : "text-black "
                 }`
               }
             >
@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Login */}
-        <div className="hidden sm:flex items-center">
+        <div className="hidden md:flex items-center">
           <NavLink
             to="/accounts/login"
             className="
@@ -62,7 +62,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="relative w-10 h-10 flex sm:hidden ">
+        <div className="relative w-10 h-10 flex md:hidden ">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
@@ -89,11 +89,9 @@ const Navbar = () => {
 
         {/* For Mobile Menu  */}
         <div
-          className={`absolute sm:hidden top-15 right-4 w-[70%] p2-1 bg-[#FAE0E1] rounded-sm 
-  flex flex-col items-center font-bold text-xl transform duration-700 
-  ease-in-out transition-transform z-40 ${
-    isMenuOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
-  }`}
+          className={`absolute xl:hidden top-[80px] right-4 sm:right-4 w-[60%] lg:w-[30%] md:w-[30%] rounded-xl flex flex-col items-center font-bold text-xl transform duration-700 ease-in-out transition-transform z-40 ${
+            isMenuOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          }`}
           style={{ transition: "transform 0.3s ease, opacity 0.2s ease" }}
         >
           {[
@@ -106,24 +104,15 @@ const Navbar = () => {
               key={index}
               to={item.to}
               onClick={() => setIsMenuOpen(false)}
-              className="font-jakarta tracking-wider inline-block p-3 w-full text-black hover:bg-[#256AF4] hover:text-white text-center  
-        font-bold text-[16px] transition duration-1200 ease-in-out">
+              className={({ isActive }) =>
+                `font-jakarta tracking-wider inline-block p-1 w-full text-center  font-bold text-[16px] pb-1 transition duration-700 ease-in-out rounded-md ${
+                  isActive ? "text-[#0E265E] " : "text-black "
+                }`
+              }
+            >
               {item.label}
             </NavLink>
           ))}
-
-          {/* Mobile Login Button */}
-          <NavLink
-            to="/accounts/login"
-            onClick={() => setIsMenuOpen(false)}
-            className="
-      mt-2 font-jakarta text-center tracking-wider font-bold  border-y border-y-black 
-       bg-[#FAE0E1] hover:bg-[#256AF4] hover:text-white 
-      transition-all duration-1200 px-6 py-2 w-full text-[16px]
-    "
-          >
-            Login
-          </NavLink>
         </div>
       </nav>
     </>
