@@ -37,7 +37,7 @@ const Streamline = () => {
 
   return (
     <div className=" py-18 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
-      <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
+      <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-0">
         {/* For Details Section */}
         <div className="flex flex-col justify-start items-start gap-[25px] w-full lg:w-1/2">
           <h1 className="font-jakarta text-[26px] sm:text-[28px] md:text-[32px] w-full font-bold text-[#201C44] leading-tight">
@@ -78,7 +78,7 @@ const Streamline = () => {
         {/* for Image section */}
         <div className="relative flex justify-center items-center w-full lg:w-1/2 mt-10">
           <img
-            className="absolute bottom-75 sm:bottom-103 md:bottom-120 lg:bottom-120 left-85 sm:left-115 md:left-133 lg:left-160 w-[60px] sm:w-20 md:w-[105px]"
+            className="absolute bottom-75 sm:bottom-103 md:bottom-120 lg:bottom-120 left-85 sm:left-115 md:left-133 lg:left-145 w-[60px] sm:w-20 md:w-[90px]"
             src="/Assets/All Images/Group.png"
             alt="stramline logo"
           />
