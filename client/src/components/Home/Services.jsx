@@ -34,9 +34,9 @@ const Services = () => {
   return (
     <>
       <div className="pt-18 w-full flex justify-center ">
-        <div className="w-full  gap-14 flex flex-col justify-center items-center">
+        <div className="w-full  gap-12 flex flex-col justify-center items-center">
           {/* For Heading */}
-          <div className="flex flex-col justify-center gap-3 items-center w-full">
+          <div className="flex flex-col justify-center gap-2 items-center w-full">
             <h1 className="tracking-wide text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]  font-bold font-gilroy text-center">
               Our Services
             </h1>

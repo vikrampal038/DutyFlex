@@ -37,9 +37,9 @@ const Streamline = () => {
 
   return (
     <div className=" py-18 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
-      <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-0">
+      <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-12">
         {/* For Details Section */}
-        <div className="flex flex-col justify-start items-start gap-[25px] w-full lg:w-1/2">
+        <div className="flex flex-col justify-start items-start gap-8 w-full lg:w-1/2">
           <h1 className="font-jakarta text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40] w-full font-bold text-[#201C44] leading-tight">
             Streamline your implementation with our guided process
           </h1>

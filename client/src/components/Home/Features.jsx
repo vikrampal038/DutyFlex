@@ -7,7 +7,7 @@ const Features = () => {
   return (
     <>
       <div className=" pt-14 w-full flex justify-center">
-        <div className="w-full flex justify-center items-center gap-10 flex-col">
+        <div className="w-full flex justify-center items-center gap-12 flex-col">
           {/* for Heading */}
           <div className="text-center">
             <h1 className="tracking-wide font-bold text-[#201C44] text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40] font-manrope">

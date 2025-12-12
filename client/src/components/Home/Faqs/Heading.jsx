@@ -7,10 +7,10 @@ const Heading = () => {
   max-xl:px-8 max-lg:px-6 max-md:px-4 max-sm:px-2"
     >
       <div
-        className="w-full flex flex-col justify-center items-center gap-14 max-md:gap-10 max-sm:gap-8 border"
+        className="w-full flex flex-col justify-center items-center gap-12 max-md:gap-10 max-sm:gap-8"
       >
         {/* Heading Section */}
-        <div className="w-full flex flex-col justify-center items-center gap-3 border">
+        <div className="w-full flex flex-col justify-center items-center gap-3">
           <img
             src="/Assets/All Images/Icon.png"
             alt="faq heading"
