@@ -8,27 +8,27 @@ const ClientPortal = () => {
       <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
         {/* For Details Section */}
         <div className="flex flex-col justify-start items-start gap-[25px] w-full lg:w-1/2">
-          <h1 className="font-jakarta text-[26px] sm:text-[28px] md:text-[32px] w-full font-bold text-[#201C44] leading-tight">
+          <h1 className="font-jakarta text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40] leading-8 sm:leading-10 lg:leading-12 w-full font-bold text-[#201C44]">
             Dutyflex Client Portal Simplify Real-Time Guard Management Anywhere,
             Anytime
           </h1>
 
-          <p className="text-[20px] leading-8 tracking-wide text-[#383838] font-normal font-manrope]">
+          <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] leading-4 sm:leading-6 lg:leading-8 tracking-wide text-[#383838] font-normal font-manrope]">
             Experience how Dutyflex simplifies security operations, step by
             step. From guard scheduling to invoicing—see the entire workflow in
             one seamless walkthrough.
           </p>
 
           <div className="flex flex-col justify-start gap-4">
-            <p className="text-[20px] leading-8 tracking-wide text-black font-normal font-manrope">
+            <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] tracking-wide text-black font-normal font-manrope">
               {" "}
               ✔ Real-time dashboard{" "}
             </p>
-            <p className="text-[20px] leading-8 tracking-wide text-black font-normal font-manrope">
+            <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]tracking-wide text-black font-normal font-manrope">
               {" "}
               ✔ Smart shift scheduling{" "}
             </p>
-            <p className="text-[20px] leading-8 tracking-wide text-black font-normal font-manrope">
+            <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] tracking-wide text-black font-normal font-manrope">
               {" "}
               ✔ GPS + QR patrol tracking{" "}
             </p>
@@ -36,7 +36,7 @@ const ClientPortal = () => {
 
           <NavLink
             to="/"
-            className=" text-center font-jakarta font-bold text-[16px] rounded-sm bg-[#FAE0E1]
+            className=" text-center font-jakarta font-bold text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] rounded-sm bg-[#FAE0E1]
             hover:bg-[#201C44] hover:text-white transition-all duration-1400
               max-md:px-5 max-md:py-3 max-sm:px-4 max-sm:py-2 flex gap-2 justify-center items-center py-3 sm:py-3 px-5 mt-4 w-full sm:w-auto"
           >

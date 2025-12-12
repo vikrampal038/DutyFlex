@@ -36,12 +36,12 @@ const Services = () => {
       <div className="pt-18 w-full flex justify-center ">
         <div className="w-full  gap-14 flex flex-col justify-center items-center">
           {/* For Heading */}
-          <div className="flex flex-col justify-center gap-3 items-center w-full sm:w-[80%] md:w-full lg:w-[60%] px-4 sm:px-10">
-            <h1 className="tracking-wide text-[16px] font-bold font-gilroy text-center">
+          <div className="flex flex-col justify-center gap-3 items-center w-full">
+            <h1 className="tracking-wide text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]  font-bold font-gilroy text-center">
               Our Services
             </h1>
 
-            <h2 className="font-manrope w-full tracking-tight text-[#201C44] text-[24px] sm:text-[28px] md:text-[35px] lg:text-[40px] text-center font-bold leading-snug">
+            <h2 className="font-manrope w-full tracking-tight text-[#201C44] text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] text-center font-bold leading-snug">
               Save Time Managing Your Business With Our Best Services
             </h2>
           </div>
@@ -62,7 +62,7 @@ const Services = () => {
                     />
                   </div>
 
-                  <h3 className="text-[18px] sm:text-[20px] font-bold tracking-wide text-start text-[#000000]">
+                  <h3 className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-bold tracking-wide text-start text-[#000000]">
                     {item.title}
                   </h3>
 

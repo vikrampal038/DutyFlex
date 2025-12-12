@@ -40,7 +40,7 @@ const Streamline = () => {
       <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-0">
         {/* For Details Section */}
         <div className="flex flex-col justify-start items-start gap-[25px] w-full lg:w-1/2">
-          <h1 className="font-jakarta text-[26px] sm:text-[28px] md:text-[32px] w-full font-bold text-[#201C44] leading-tight">
+          <h1 className="font-jakarta text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40] w-full font-bold text-[#201C44] leading-tight">
             Streamline your implementation with our guided process
           </h1>
 
@@ -64,7 +64,7 @@ const Streamline = () => {
 
           <NavLink
             to="/#"
-            className=" text-center font-jakarta font-bold text-[16px] rounded-sm bg-[#FAE0E1]
+            className=" text-center font-jakarta font-bold text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] rounded-sm bg-[#FAE0E1]
             hover:bg-[#201C44] hover:text-white transition-all duration-1400
               max-md:px-5 max-md:py-3 max-sm:px-4 max-sm:py-2 flex gap-2 justify-center items-center py-3 sm:py-4 px-5 mt-4 w-full sm:w-auto"
           >
@@ -78,7 +78,7 @@ const Streamline = () => {
         {/* for Image section */}
         <div className="relative flex justify-center items-center w-full lg:w-1/2 mt-10">
           <img
-            className="absolute bottom-75 sm:bottom-103 md:bottom-120 lg:bottom-120 left-85 sm:left-115 md:left-133 lg:left-145 w-[60px] sm:w-20 md:w-[90px]"
+            className="absolute bottom-75 sm:bottom-103 md:bottom-120 lg:bottom-120 left-85 sm:left-120 md:left-100 lg:left-145 w-[60px] sm:w-20 md:w-[90px]"
             src="/Assets/All Images/Group.png"
             alt="stramline logo"
           />

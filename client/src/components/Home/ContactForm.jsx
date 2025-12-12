@@ -79,7 +79,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className="pt-18 w-full flex justify-center items-center">
+    <div className="py-14 w-full flex justify-center items-center">
       <div className="w-[95%] md:w-[80%] lg:w-[75%] flex flex-col lg:flex-row justify-center items-center gap-10">
 
         {/* Left Side */}
@@ -90,10 +90,10 @@ export function ContactForm() {
             </div>
 
             <div className="flex flex-col gap-5">
-              <h1 className="text-[28px] md:text-[36px] text-black font-bold font-Gilroy leading-10">
+              <h1 className="text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40]  text-black font-bold font-Gilroy leading-10">
                 Get a free consultancy from our expert right now!
               </h1>
-              <p className="text-[16px] font-normal font-Gilroy leading-7 text-[#7a7a7a]">
+              <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-medium font-Gilroy leading-7 text-[#7a7a7a]">
                 With lots of unique blocks, you can easily build a page without coding.
               </p>
             </div>
@@ -101,10 +101,10 @@ export function ContactForm() {
         </div>
 
         {/* Form */}
-        <div className="lg:w-1/2 p-1 flex justify-center">
+        <div className="w-full lg:w-1/2 p-1 flex justify-center">
           <form
             onSubmit={handleSubmit}
-            className="border border-[#E7E9ED] rounded-xl p-5 w-[70%]"
+            className="border border-[#E7E9ED] rounded-xl p-5 w-full"
           >
             <div className="flex flex-col gap-3">
 
@@ -184,7 +184,7 @@ export function ContactForm() {
             </div>
 
             <div className="flex justify-center mt-5 bg-[#142965] p-3 rounded-lg cursor-pointer">
-              <button className="text-white text-[16px] font-bold font-Gilroy" type="submit">
+              <button className="text-white text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-bold font-Gilroy" type="submit">
                 Get Free Consultancy
               </button>
             </div>

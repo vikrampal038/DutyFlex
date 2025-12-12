@@ -6,11 +6,11 @@ import { NavLink } from "react-router-dom";
 const Features = () => {
   return (
     <>
-      <div className=" pt-16 w-full flex justify-center">
-        <div className="w-full flex justify-center items-center gap-14 flex-col">
+      <div className=" pt-14 w-full flex justify-center">
+        <div className="w-full flex justify-center items-center gap-10 flex-col">
           {/* for Heading */}
           <div className="text-center">
-            <h1 className="tracking-wide font-bold text-[#201C44] text-[30px] md:text-[35px] lg:text-[40] font-manrope">
+            <h1 className="tracking-wide font-bold text-[#201C44] text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40] font-manrope">
               Features for you here!
             </h1>
           </div>
@@ -29,11 +29,11 @@ const Features = () => {
                   className="w-full object-contain"
                 />
 
-                <h3 className="text-[16px] md:text-[14px] font-medium tracking-wider text-[#131126]">
+                <h3 className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-medium tracking-wider text-[#131126]">
                   {item.category}
                 </h3>
 
-                <p className="text-[18px] md:text[20px] lg:text[24px] leading-6 md:leading-6 lg:leading-7 font-bold text-[#201C44] tracking-wide">
+                <p className="text-[16px] sm:text-[18px] md:text[20px] lg:text[24px] leading-6 md:leading-6 lg:leading-7 font-bold text-[#201C44] tracking-wide">
                   {item.description}
                 </p>
 

@@ -4,34 +4,30 @@ import { FaChevronRight } from "react-icons/fa";
 const Hero = () => {
   return (
     <div
-      className="flex flex-col justify-center items-center gap-8 
-  max-xl:px-8 max-lg:px-6 max-md:px-4 max-sm:px-2"
+      className="pt-5 flex flex-col justify-center items-center gap-8"
     >
       {/* for hero Details */}
       <div
-        className="flex justify-center items-center 
-    max-lg:flex-col max-lg:gap-10 max-md:gap-8 max-sm:gap-6"
+        className="grid justify-items-center items-center lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8 sm:gap-10"
       >
         {/* for Details Section */}
         <div
-          className="w-1/2 flex flex-col gap-8 
-      max-lg:w-full max-md:gap-8 max-sm:gap-6"
+          className=" w-full flex flex-col gap-8 "
         >
           {/* Heading + Para */}
           <div
-            className="flex flex-col justify-start items-start gap-8
-        max-md:gap-8 max-sm:gap-5"
+            className="flex flex-col justify-start items-center gap-8 sm:gap-5 md:gap-8 "
           >
             <h1
-              className="text-[54px] font-bold font-Jakarta leading-8 lg:leading-15 text-[#201C44] tracking-wider
-          xl:text-[40px] lg:text-[35px] md:text-[30px] sm:text-[25px]"
+              className="font-bold font-Jakarta leading-10 sm:leading-12 lg:leading-15 text-[#201C44] tracking-wider text-[30px] sm:text-[40px] md:text-[30px]
+           lg:text-[35px]  xl:text-[54px] "
             >
-              Dutyflex is a cloud-based Security Guard Management SaaS platform
+              DutyFlex is a cloud-based Security Guard Management SaaS platform
             </h1>
 
             <p
-              className="text-[16px] w-[80%] font-medium text-[#131126] font-Jakarta leading-6 lg:leading-8 tracking-widest
-          max-lg:w-full max-md:text-[15px] max-sm:text-[14px]"
+              className=" font-medium text-[#131126] font-Jakarta leading-6 lg:leading-8 tracking-widest text-[14px]
+            sm:text-[16px] max-md:text-[15px] max-lg:w-full"
             >
               Designed for security companies, Residential and Corporate
               security teams. It automates guard scheduling, payroll-ready
@@ -41,21 +37,21 @@ const Hero = () => {
 
           {/* Button Section */}
           <div
-            className="flex justify-start items-center gap-5 
-            max-md:flex-wrap max-md:gap-4 max-sm:gap-3"
+            className="flex justify-start items-center gap-3  
+            max-md:flex-wrap "
           >
             {/* Contact Now */}
             <button
-              className="text-center font-jakarta font-bold text-[16px] px-6 py-4 rounded-sm bg-[#FAE0E1]
+              className="text-center font-jakarta font-bold text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] px-4 py-2 rounded-sm bg-[#FAE0E1]
             hover:bg-[#201C44] hover:text-white transition-all duration-1400
-              max-md:px-5 max-md:py-3 max-sm:px-4 max-sm:py-2"
+              md:px-5 md:py-3 sm:px-4 sm:py-2"
             >
               Contact Now
             </button>
 
             {/* Arrow */}
             <button
-              className="text-center px-6 py-4 text-[#201C44] rounded-sm bg-white border
+              className="text-center px-4 py-2 text-[14px] text-[#201C44] rounded-sm bg-white border
           hover:bg-[#201C44] hover:text-white transition-all duration-1400
           max-md:px-5 max-md:py-3 max-sm:px-4 max-sm:py-2"
             >
@@ -64,7 +60,7 @@ const Hero = () => {
 
             {/* Book a Demo */}
             <button
-              className="text-center font-jakarta font-bold text-[16px] px-6 py-4 rounded-sm border border-black
+              className="text-center font-jakarta font-bold text-[14px] px-4 py-2 rounded-sm border border-black
           hover:bg-[#201C44] hover:text-white transition-all duration-1400
           max-md:px-5 max-md:py-3 max-sm:px-4 max-sm:py-2"
             >
@@ -74,9 +70,9 @@ const Hero = () => {
         </div>
 
         {/* Image */}
-        <div className="flex justify-end items-center max-lg:justify-center max-lg:w-full">
+        <div className="flex justify-center items-center">
           <img
-            className="inline-block w-[620px] h-[515px]
+            className="w-[620px] h-[515px]
             max-xl:w-[520px] max-xl:h-[440px]
             max-lg:w-[850px] max-lg:h-[500px]
             max-md:w-[700px] max-md:h-[450px]

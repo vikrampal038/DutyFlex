@@ -21,14 +21,14 @@ const Guide = () => {
           {/* Heading */}
           <div className="w-full text-center lg:text-start flex flex-col gap-4">
             <h1
-              className="text-[26px] sm:text-[32px] md:text-[36px] lg:text-[40px] 
+              className="text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40]
                        font-extrabold font-manrope tracking-wide text-black leading-tight"
             >
               Guided Mobile App Tour
             </h1>
 
             <h2
-              className="text-[14px] sm:text-[16px] md:text-[18px] 
+              className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] 
                        font-manrope font-normal text-[#383838] tracking-wide leading-relaxed"
             >
               Explore every feature of the mobile app with our step-by-step
@@ -67,14 +67,14 @@ const Guide = () => {
           {/* Learn More Button */}
           <NavLink
             to="/"
-            className=" text-center font-jakarta font-bold text-[16px] rounded-sm bg-[#FAE0E1]
+            className=" text-center font-jakarta font-bold text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] rounded-sm bg-[#FAE0E1]
             hover:bg-[#201C44] hover:text-white transition-all duration-1400
               max-md:px-5 max-md:py-3 max-sm:px-4 max-sm:py-2 flex gap-2 justify-center items-center py-3 sm:py-3 px-5 mt-4 w-full sm:w-auto"
           >
             <button className=" text-[14px] sm:text-[16px] font-bold font-jakarta tracking-wide">
               Learn More
             </button>
-            <FaChevronRight className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
+            <FaChevronRight className="w-4 h-4   sm:w-[18px] sm:h-[18px]" />
           </NavLink>
         </div>
       </div>
