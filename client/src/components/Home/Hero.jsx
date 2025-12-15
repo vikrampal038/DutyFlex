@@ -2,6 +2,27 @@ import React from "react";
 import { FaChevronRight } from "react-icons/fa";
 
 const Hero = () => {
+  const services = [
+    {
+      id: 1,
+      icon: "/Assets/All Images/Tick Square.png",
+      bg: "#FAE0E1",
+      text: "Super useful and easy to with over 100+ customisations!",
+    },
+    {
+      id: 2,
+      icon: "/Assets/All Images/Time Circle.png",
+      bg: "#F3DEB3",
+      text: "Super useful and easy to with over 100+ customisations!",
+    },
+    {
+      id: 3,
+      icon: "/Assets/All Images/Upload.png",
+      bg: "#CBCFFA",
+      text: "Super useful and easy to with over 100+ customizations!",
+    },
+  ];
+
   return (
     <div className="pt-5 flex flex-col justify-center items-center gap-8">
       {/* for hero Details */}
@@ -84,8 +105,9 @@ const Hero = () => {
             "rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset",
         }}
       >
-        {/* Service 1 */}
+        {services.map((service) => (
         <div
+          key={service.id}
           className="flex justify-between items-center gap-3 
       max-md:gap-4 max-sm:gap-3 max-lg:flex-col max-lg:text-center"
         >
@@ -93,13 +115,14 @@ const Hero = () => {
             className="w-[50px] h-[50px] rounded-sm bg-[#FAE0E1] flex justify-center items-center
           max-sm:w-10 max-sm:h-10"
             style={{
+              backgroundColor: service.bg,
               boxShadow:
                 "rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset",
             }}
           >
             <img
               className="w-[25px] h-[25px] sm:w-5 sm:h-5"
-              src="/Assets/All Images/Tick Square.png"
+              src={service.icon}
               alt="serviceIcon"
             />
           </div>
@@ -108,65 +131,12 @@ const Hero = () => {
             className="text-16 w-10 lg:w-65 font-Jakarta font-normal leading-5 tracking-wider text-white
         max-lg:w-full max-md:text-[14px]"
           >
-            Super useful and easy to with over 100+ customisations!
+            {service.text}
+            
           </h2>
         </div>
+        ))}
 
-        {/* Service 2 */}
-        <div
-          className="flex justify-between items-center gap-3 
-      max-md:gap-4 max-sm:gap-3 max-lg:flex-col max-lg:text-center"
-        >
-          <div
-            className="w-[50px] h-[50px] rounded-sm bg-[#F3DEB3] flex justify-center items-center
-          max-sm:w-[40px] max-sm:h-[40px]"
-            style={{
-              boxShadow:
-                "rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset",
-            }}
-          >
-            <img
-              className="w-[25px] h-[25px] max-sm:w-[20px] max-sm:h-[20px]"
-              src="/Assets/All Images/Time Circle.png"
-              alt="serviceIcon"
-            />
-          </div>
-
-          <h2
-            className="text-16 w-65 font-Jakarta  font-normal leading-5 tracking-wider text-white
-        max-lg:w-full max-md:text-[14px]"
-          >
-            Super useful and easy to with over 100+ customisations!
-          </h2>
-        </div>
-
-        {/* Service 3 */}
-        <div
-          className="flex justify-between items-center gap-3
-          max-md:gap-4 max-sm:gap-3 max-lg:flex-col max-lg:text-center"
-        >
-          <div
-            className="w-[50px] h-[50px] rounded-sm bg-[#CBCFFA] flex justify-center items-center
-          max-sm:w-[40px] max-sm:h-[40px]"
-            style={{
-              boxShadow:
-                "rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset",
-            }}
-          >
-            <img
-              className="w-[25px] h-[25px] max-sm:w-[20px] max-sm:h-[20px]"
-              src="/Assets/All Images/Upload.png"
-              alt="serviceIcon"
-            />
-          </div>
-
-          <h2
-            className="text-16 w-65 font-Jakarta  font-normal leading-5 tracking-wider text-white
-            max-lg:w-full max-md:text-[14px]"
-          >
-            Super useful and easy to with over 100+ customizations!
-          </h2>
-        </div>
       </div>
     </div>
   );
