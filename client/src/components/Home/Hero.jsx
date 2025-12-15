@@ -132,7 +132,6 @@ const Hero = () => {
         max-lg:w-full max-md:text-[14px]"
           >
             {service.text}
-            
           </h2>
         </div>
         ))}
