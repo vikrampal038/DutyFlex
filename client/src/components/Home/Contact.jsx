@@ -85,7 +85,8 @@ export function Contact() {
         {/* Left Side */}
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col gap-8">
-            <div className="bg-[#A1A1A1] w-[87px] h-[87px] flex justify-center items-center rounded-full">
+            {/* #A1A1A1 image bg original color  */}
+            <div className="bg-[#eeeeee] w-[87px] h-[87px] flex justify-center items-center rounded-full">
               <img src="/Assets/All Images/Path.png" alt="contact icon" />
             </div>
 
