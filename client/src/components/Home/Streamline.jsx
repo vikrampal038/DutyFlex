@@ -36,18 +36,18 @@ const Streamline = () => {
   ];
 
   return (
-    <div className=" py-18 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
+    <div className=" py-18 flex flex-col justify-center items-center w-full">
       <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-5 sm:gap-8 md:gap-12">
         {/* For Details Section */}
-        <div className="flex flex-col justify-start items-start gap-8 w-full lg:w-1/2">
-          <h1 className="font-jakarta text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40] w-full font-bold text-[#201C44] leading-tight">
+        <div className="flex flex-col justify-start items-start gap-8 w-full lg:w-1/2 ">
+          <h1 className="font-jakarta text-[20px] sm:text-[25px] md:text-[30px] lg:text-[40] w-full font-bold text-[#201C44] leading-8 sm:leading-10 md:leading-12 ">
             Streamline your implementation with our guided process
           </h1>
 
-          <div className="flex flex-col gap-[13px]">
+          <div className="flex flex-col gap-[13px] ">
             {StreamlineData.map((item, index) => (
               <div key={index} className="flex gap-3 items-center">
-                <div className="flex justify-center items-center w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] py-3 rounded-md px-3 bg-[#FAE0E1]">
+                <div className="flex justify-center items-center w-10 h-10 sm:w-[50px] sm:h-[50px] py-3 rounded-md px-3 bg-[#FAE0E1]">
                   <img
                     src={item.image}
                     alt="tick icon"
@@ -78,13 +78,13 @@ const Streamline = () => {
         {/* for Image section */}
         <div className="relative flex justify-center items-center w-full lg:w-1/2 mt-10">
           <img
-            className="absolute bottom-65 sm:bottom-103 md:bottom-120 lg:bottom-122 left-75 sm:left-120 md:left-100 lg:left-168 w-10 sm:w-20 md:w-[90px]"
+            className="absolute bottom-66 sm:bottom-100 md:bottom-110 lg:bottom-85 left-72 sm:left-125 md:left-145 lg:left-90 xl:left-173 w-10 sm:w-18 md:w-[70px] lg:w-[75px]"
             src="/Assets/All Images/Group.png"
             alt="stramline logo"
           />
 
           <img
-            className=" w-[450px] sm:w-[550px] md:w-[650px]h-auto"
+            className=" w-[450px] sm:w-[500px] md:w-[550px] lg:w-[600px] xl:w-[650px] h-auto"
             src="Assets/All Images/image 20.png"
             alt="streamline image"
           />

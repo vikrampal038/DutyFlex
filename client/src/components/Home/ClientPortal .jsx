@@ -15,12 +15,12 @@ const ClientPortal = () => {
         <div 
         
         className="flex flex-col justify-start items-start gap-[25px] w-full lg:w-1/2">
-          <h1 className="font-jakarta text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40] leading-8 sm:leading-10 lg:leading-12 w-full font-bold text-[#201C44]">
-            Dutyflex Client Portal Simplify Real-Time Guard Management Anywhere,
+          <h1 className="font-jakarta text-[20px] sm:text-[25px] md:text-[30px] lg:text-[40] w-full font-bold text-[#201C44] leading-8 sm:leading-10 md:leading-12 ">
+            DutyFlex Client Portal Simplify Real-Time Guard Management Anywhere,
             Anytime
           </h1>
 
-          <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] leading-4 sm:leading-6 lg:leading-8 tracking-wide text-[#383838] font-normal font-manrope]">
+          <p className="text-[14px] sm:text-[16px] md:text-[18px] leading-4 sm:leading-6 lg:leading-8 tracking-wide text-[#383838] font-normal font-manrope]">
             Experience how Dutyflex simplifies security operations, step by
             step. From guard scheduling to invoicing—see the entire workflow in
             one seamless walkthrough.
@@ -31,7 +31,7 @@ const ClientPortal = () => {
             {ClientList.map((item, index) => (
             <p
              key={index}
-            className="text-[16px] sm:text-[18px] md:text-[20px]  tracking-wider text-black font-normal font-manrope">
+            className="text-[14px] sm:text-[16px] md:text-[18px]  tracking-wider text-black font-normal font-manrope">
               {item.title}
             </p>
             ))}

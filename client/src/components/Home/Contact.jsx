@@ -84,14 +84,15 @@ export function Contact() {
 
         {/* Left Side */}
         <div className="w-full lg:w-1/2">
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-3 sm:gap-5  md:gap-8">
             {/* #A1A1A1 image bg original color  */}
-            <div className="bg-[#eeeeee] w-[87px] h-[87px] flex justify-center items-center rounded-full">
+            <div className="bg-[#eeeeee] w-[55px] h-[55px] sm:w-[65px] sm:h-[75px] md:w-[65px] md:h-[75px] lg:w-[85px] lg:h-[85px] flex justify-center items-center rounded-full">
               <img src="/Assets/All Images/Path.png" alt="contact icon" />
             </div>
 
             <div className="flex flex-col gap-5">
-              <h1 className="text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40]  text-black font-bold font-Gilroy leading-10">
+              <h1 className="text-[20px] sm:text-[25px] md:text-[30px] lg:text-[40]   text-black font-bold font-Gilroy leading-10">
+                 
                 Get a free consultancy from our expert right now!
               </h1>
               <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-medium font-Gilroy leading-7 text-[#7a7a7a]">

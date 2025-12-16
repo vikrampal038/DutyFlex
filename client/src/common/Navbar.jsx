@@ -20,7 +20,7 @@ const Navbar = () => {
         </div>
 
         {/* For Desktop Menu  */}
-        <div className="hidden md:flex items-center mr-auto gap-12 font-semibold text-base list-none text-white">
+        <div className="hidden lg:flex items-center mr-auto gap-12 font-semibold text-base list-none text-white">
           {[
             { to: "/platform", label: "Platform" },
             { to: "/solutions", label: "Solutions" },
@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Login */}
-        <div className="hidden md:flex items-center">
+        <div className="hidden lg:flex items-center">
           <NavLink
             to="/accounts/login"
             className="
@@ -62,7 +62,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="relative w-10 h-10 flex md:hidden ">
+        <div className="relative w-10 h-10 flex lg:hidden ">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
@@ -89,7 +89,7 @@ const Navbar = () => {
 
         {/* For Mobile Menu  */}
         <div
-          className={`absolute md:hidden top-15 right-4 w-[40%] p2-1 bg-[#FAE0E1] rounded-sm 
+          className={`absolute lg:hidden top-15 right-4 w-[40%] p2-1 bg-[#FAE0E1] rounded-sm 
   flex flex-col items-center font-bold text-xl transform duration-700 
   ease-in-out transition-transform z-40 ${
     isMenuOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"

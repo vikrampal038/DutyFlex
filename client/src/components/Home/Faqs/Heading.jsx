@@ -19,11 +19,10 @@ const Heading = () => {
 
           {/* heading */}
           <div
-            className="items-center flex flex-col gap-3 justify-center w-[50%]
-        max-lg:w-[70%] max-md:w-[85%] max-sm:w-full"
+            className="items-center flex flex-col gap-3 justify-center w-full border"
           >
             <h1
-              className=" text-[22px] sm:text-[30px] md:text-[35px] lg:text-[40]  font-bold font-jakarta tracking-wide text-[#201C44]"
+              className="font-jakarta text-[20px] sm:text-[25px] md:text-[30px] text-center lg:text-[40] w-full font-bold text-[#201C44] leading-8 sm:leading-10 md:leading-12 "
             >
               Frequently asked questions
             </h1>

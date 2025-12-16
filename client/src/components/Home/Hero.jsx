@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <div className="pt-5 flex flex-col justify-center items-center gap-8">
       {/* for hero Details */}
-      <div className="grid justify-items-center items-center lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8 sm:gap-10">
+      <div className="grid justify-items-center items-center lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1  gap-8 sm:gap-10">
         {/* for Details Section */}
         <div className=" w-full flex flex-col gap-8 ">
           {/* Heading + Para */}
@@ -98,8 +98,8 @@ const Hero = () => {
 
       {/* Services */}
       <div
-        className="rounded-sm w-full bg-[#3C3679] flex justify-around items-center p-10
-      max-xl:p-8 max-lg:flex-col max-lg:gap-10 max-md:gap-8 max-sm:gap-6 max-md:p-6 max-sm:p-4"
+        className="rounded-sm w-full bg-[#3C3679] flex justify-around items-center flex-col p-10
+      xl:p-8 lg:flex-col lg:gap-10 md:gap-10 sm:gap-6 md:p-6  sm:p-4"
         style={{
           boxShadow:
             "rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset",
@@ -109,7 +109,7 @@ const Hero = () => {
         <div
           key={service.id}
           className="flex justify-between items-center gap-3 
-      max-md:gap-4 max-sm:gap-3 max-lg:flex-col max-lg:text-center"
+      md:gap-4 sm:gap-3 lg:flex-col lg:text-center"
         >
           <div
             className="w-[50px] h-[50px] rounded-sm bg-[#FAE0E1] flex justify-center items-center
@@ -128,8 +128,8 @@ const Hero = () => {
           </div>
 
           <h2
-            className="text-16 w-10 lg:w-65 font-Jakarta font-normal leading-5 tracking-wider text-white
-        max-lg:w-full max-md:text-[14px]"
+            className="text-16 md:text-[14px] w-full  font-Jakarta font-normal leading-5 tracking-wider text-white
+         "
           >
             {service.text}
           </h2>

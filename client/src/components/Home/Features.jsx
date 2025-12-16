@@ -16,11 +16,11 @@ const Features = () => {
           </div>
 
           {/* All Details */}
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-col-3 xl:grid-cols-4 gap-8">
             {FeatureData.map((item, index) => (
               <div
                 key={index}
-                className="rounded-xl w-full relative h-110 sm:h-100 md:h-90 lg:h-95 xl:h-95 2xl:h-116 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-3 p-3
+                className="rounded-xl w-full relative h-110 sm:h-100 md:h-98  lg:h-95 xl:h-95 2xl:h-116 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-3 p-3
                 "
               >
                 <img
