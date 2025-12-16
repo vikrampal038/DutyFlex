@@ -55,7 +55,7 @@ const Guide = () => {
 
                 {/* Title */}
                 <h3
-                  className="text-[15px] sm:text-[17px] md:text-[19px] lg:text-[20px] 
+                  className="text-[14px] sm:text-[16px] md:text-[18px]  
                            font-manrope font-normal tracking-wide text-[#142965] leading-tight"
                 >
                   {item.title}

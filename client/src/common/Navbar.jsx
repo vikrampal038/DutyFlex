@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className=" w-full bg-[#ffffff] flex justify-between items-center py-2 gap-15">
+      <nav className=" w-full bg-[#ffffff] flex justify-between items-center py-6 gap-15">
         {/* Logo */}
         <div className="shrink-0 flex items-center">
           <NavLink to="/" className="group inline-block">

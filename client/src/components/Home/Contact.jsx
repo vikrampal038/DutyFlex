@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
-export function ContactForm() {
+export function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -47,7 +47,7 @@ export function ContactForm() {
     };
 
     // Save to localStorage
-    localStorage.setItem("contactForm", JSON.stringify(formData));
+    localStorage.setItem("contact", JSON.stringify(formData));
 
     // Send Email
     emailjs
@@ -196,4 +196,4 @@ export function ContactForm() {
   );
 }
 
-export default ContactForm;
+export default Contact;

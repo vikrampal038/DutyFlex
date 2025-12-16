@@ -23,7 +23,7 @@ const Heading = () => {
         max-lg:w-[70%] max-md:w-[85%] max-sm:w-full"
           >
             <h1
-              className=" text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40]  font-bold font-jakarta tracking-wider text-[#201C44]"
+              className=" text-[22px] sm:text-[30px] md:text-[35px] lg:text-[40]  font-bold font-jakarta tracking-wide text-[#201C44]"
             >
               Frequently asked questions
             </h1>

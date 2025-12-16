@@ -29,11 +29,11 @@ const Features = () => {
                   className="w-full object-contain"
                 />
 
-                <h3 className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-medium tracking-wider text-[#131126]">
+                <h3 className="text-[14px] sm:text-[16px] md:text-[18px]  font-medium tracking-wider text-[#131126]">
                   {item.category}
                 </h3>
 
-                <p className="text-[16px] sm:text-[18px] md:text[20px] lg:text[24px] leading-6 md:leading-6 lg:leading-7 font-bold text-[#201C44] tracking-wide">
+                <p className="text-[16px] sm:text-[18px] md:text[20px]  leading-6 md:leading-6 lg:leading-7 font-bold text-[#201C44] tracking-wide">
                   {item.description}
                 </p>
 

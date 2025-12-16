@@ -6,7 +6,7 @@ import Heading from "../components/Home/Faqs/Heading.jsx";
 import Streamline from "../components/Home/Streamline";
 import Guide from "../components/Home/Guide";
 import MyAccordion from "../components/Home/Faqs/MyAccordion.jsx";
-import ContactForm from "../components/Home/ContactForm.jsx";
+import Contact from "../components/Home/Contact.jsx";
 import ClientPortal from "../components/Home/ClientPortal .jsx";
 const Home = () => {
   return (
@@ -24,7 +24,7 @@ const Home = () => {
         
         {/* Contact section with id */}
         <section id="contact">
-          <ContactForm />
+          <Contact />
         </section>
       </div>
     </>

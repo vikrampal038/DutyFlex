@@ -3,11 +3,18 @@ import { NavLink } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa6";
 
 const ClientPortal = () => {
+  const ClientList = [
+    {title: "✔ Real-time dashboard"},
+    {title: "✔ Smart shift scheduling"},
+    {title: "✔ GPS + QR patrol tracking"},
+  ]
   return (
     <div className=" pt-16 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
       <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
         {/* For Details Section */}
-        <div className="flex flex-col justify-start items-start gap-[25px] w-full lg:w-1/2">
+        <div 
+        
+        className="flex flex-col justify-start items-start gap-[25px] w-full lg:w-1/2">
           <h1 className="font-jakarta text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40] leading-8 sm:leading-10 lg:leading-12 w-full font-bold text-[#201C44]">
             Dutyflex Client Portal Simplify Real-Time Guard Management Anywhere,
             Anytime
@@ -19,19 +26,15 @@ const ClientPortal = () => {
             one seamless walkthrough.
           </p>
 
+
           <div className="flex flex-col justify-start gap-4">
-            <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] tracking-wide text-black font-normal font-manrope">
-              {" "}
-              ✔ Real-time dashboard{" "}
+            {ClientList.map((item, index) => (
+            <p
+             key={index}
+            className="text-[16px] sm:text-[18px] md:text-[20px]  tracking-wider text-black font-normal font-manrope">
+              {item.title}
             </p>
-            <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]tracking-wide text-black font-normal font-manrope">
-              {" "}
-              ✔ Smart shift scheduling{" "}
-            </p>
-            <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] tracking-wide text-black font-normal font-manrope">
-              {" "}
-              ✔ GPS + QR patrol tracking{" "}
-            </p>
+            ))}
           </div>
 
           <NavLink

@@ -62,7 +62,7 @@ const Services = () => {
                     />
                   </div>
 
-                  <h3 className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-bold tracking-wide text-start text-[#000000]">
+                  <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold tracking-wide text-start text-[#000000]">
                     {item.title}
                   </h3>
 

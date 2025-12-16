@@ -6,7 +6,7 @@ import Footer from "./common/Footer";
 function App() {
   return (
     <>
-      <div className="flex flex-col w-full px-4 sm:px-8 md:px-12 lg:px-16 ">
+      <div className="flex flex-col w-full px-4 sm:px-8 md:px-12 lg:px-16 overflow-x-hidden ">
         <Navbar />
         <Mainrouter />
         <Footer />
