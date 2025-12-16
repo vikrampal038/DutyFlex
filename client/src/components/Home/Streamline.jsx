@@ -78,7 +78,7 @@ const Streamline = () => {
         {/* for Image section */}
         <div className="relative flex justify-center items-center w-full lg:w-1/2 mt-10">
           <img
-            className="absolute bottom-58 sm:bottom-103 md:bottom-120 lg:bottom-122 left-65 sm:left-120 md:left-100 lg:left-168 w-10 sm:w-20 md:w-[90px]"
+            className="absolute bottom-65 sm:bottom-103 md:bottom-120 lg:bottom-122 left-75 sm:left-120 md:left-100 lg:left-168 w-10 sm:w-20 md:w-[90px]"
             src="/Assets/All Images/Group.png"
             alt="stramline logo"
           />
