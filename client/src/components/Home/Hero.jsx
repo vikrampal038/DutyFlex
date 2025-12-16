@@ -98,8 +98,8 @@ const Hero = () => {
 
       {/* Services */}
       <div
-        className="rounded-sm w-full bg-[#3C3679] flex justify-around items-center flex-col p-10
-      xl:p-8 lg:flex-col lg:gap-10 md:gap-10 sm:gap-6 md:p-6  sm:p-4"
+        className="rounded-sm w-full bg-[#3C3679] flex justify-around items-center flex-col  p-10
+      xl:p-8 lg:flex-row lg:gap-10 md:gap-10 sm:gap-6 md:p-6  sm:p-4"
         style={{
           boxShadow:
             "rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset",
@@ -109,7 +109,7 @@ const Hero = () => {
         <div
           key={service.id}
           className="flex justify-between items-center gap-3 
-      md:gap-4 sm:gap-3 lg:flex-col lg:text-center"
+      md:gap-4 sm:gap-3 lg:flex-row lg:text-center"
         >
           <div
             className="w-[50px] h-[50px] rounded-sm bg-[#FAE0E1] flex justify-center items-center
@@ -128,7 +128,7 @@ const Hero = () => {
           </div>
 
           <h2
-            className="text-16 md:text-[14px] w-full  font-Jakarta font-normal leading-5 tracking-wider text-white
+            className="text-16 md:text-[14px] text-start w-full lg:w-50 xl:w-70  font-Jakarta font-normal leading-5 tracking-wider text-white
          "
           >
             {service.text}
