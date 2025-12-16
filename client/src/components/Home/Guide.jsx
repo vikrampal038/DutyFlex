@@ -8,7 +8,7 @@ const Guide = () => {
     <div className="py-10 flex flex-col justify-center items-center bg-[#3C367905]">
       <div className="w-full flex flex-col lg:flex-row justify-between items-start gap-10 ">
         {/* Mobile Image */}
-        <div className="w-full flex justify-center items-center lg:w-1/2 border">
+        <div className="w-full flex justify-center items-center lg:w-1/2 ">
           <img
             className="w-[300px] sm:w-[350px] md:w-[350px] lg:w-[400px]  object-contain"
             src="/Assets/Guide/image 21.png"
@@ -17,7 +17,7 @@ const Guide = () => {
         </div>
 
         {/* Details Section */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-8 px-2 sm:px-4 border">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-8 px-2 sm:px-4 ">
           {/* Heading */}
           <div className="w-full text-center lg:text-start flex flex-col gap-4">
             <h1
