@@ -1,0 +1,51 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+/* Gilroy Local Font */
+/* @font-face {
+  font-family: "Gilroy";
+  src: url("/Fonts/Gilroy-Regular.woff2") format("woff2"),
+       url("/Fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/Fonts/Gilroy-Bold.woff2") format("woff2"),
+       url("/Fonts/Gilroy-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+} */
+
+/* GLOBAL CSS VARIABLES */
+:root {
+  --manrope: "Manrope", sans-serif;
+  --gilroy: "Gilroy", sans-serif;
+  --jakarta: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Default body font */
+body {
+  font-family: var(--jakarta);
+}
+
+/* Utility classes */
+.font-manrope {
+  font-family: var(--manrope);
+}
+
+.font-gilroy {
+  font-family: var(--gilroy);
+}
+
+.font-jakarta {
+  font-family: var(--jakarta);
+}
+
+* {
+  box-sizing: border-box;
+}
