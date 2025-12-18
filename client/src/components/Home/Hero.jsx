@@ -99,7 +99,11 @@ const Hero = () => {
       {/* Services */}
       <div
         className="rounded-sm w-full bg-[#3C3679] flex justify-around items-center flex-col  p-10
+<<<<<<< HEAD
       xl:p-8 lg:flex-row lg:gap-10 md:gap-10 sm:gap-6 md:p-6  sm:p-4 gap-4"
+=======
+      xl:p-8 lg:flex-row lg:gap-10 md:gap-10 sm:gap-6 md:p-6  sm:p-4"
+>>>>>>> 718a45fc0d0ff8058cfa68ff07c57622093c5777
         style={{
           boxShadow:
             "rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset",
