@@ -41,7 +41,7 @@ const Services = () => {
               Our Services
             </h1>
 
-            <h2 className="font-manrope w-full tracking-tight text-[#201C44] text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] text-center font-bold leading-snug">
+            <h2 className="font-manrope w-full tracking-tight text-[#201C44] text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] text-center font-bold">
               Save Time Managing Your Business With Our Best Services
             </h2>
           </div>
