@@ -1,31 +1,26 @@
 import React from "react";
 import Hero from "../components/Home/Hero";
 import Features from "../components/Home/Features";
-import Services from "../components/Home/Services";
-import Heading from "../components/Home/Faqs/Heading.jsx";
 import Streamline from "../components/Home/Streamline";
 import Guide from "../components/Home/Guide";
-import MyAccordion from "../components/Home/Faqs/MyAccordion.jsx";
 import Contact from "../components/Home/Contact.jsx";
 import ClientPortal from "../components/Home/ClientPortal .jsx";
+
 const Home = () => {
   return (
     <>
-
       <div>
-        <Hero />
-        <Features />
-        <Services />
-        <Streamline />
-        <Guide />
-        <ClientPortal  />
-        <Heading />
-        <MyAccordion />
-        
-        {/* Contact section with id */}
-        <section id="contact">
-          <Contact />
-        </section>
+        <Hero id="hero" className="scroll-mt-[100px]"></Hero> />
+        <Features id="features" />
+        <Services id="service" />
+        <Streamline id="streamline" />
+        <Guide id="guide" />
+        <ClientPortal id="features" />
+        {/* <section id="faqs">
+          <Heading />
+          <MyAccordion />
+        </section> */}
+        <Contact id="contact" />
       </div>
     </>
   );

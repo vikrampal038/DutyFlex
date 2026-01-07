@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const Features = () => {
   return (
     <>
-      <div className=" pt-14 w-full flex justify-center">
+      <div className=" pt-20 w-full flex justify-center">
         <div className="w-full flex justify-center items-center gap-12 flex-col">
           {/* for Heading */}
           <div className="text-center">
@@ -16,28 +16,28 @@ const Features = () => {
           </div>
 
           {/* All Details */}
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-col-3 xl:grid-cols-4 gap-8">
+          <div className="w-385 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-col-3 xl:grid-cols-3 gap-16">
             {FeatureData.map((item, index) => (
               <div
                 key={index}
-                className="rounded-xl w-full relative h-110 sm:h-100 md:h-98  lg:h-95 xl:h-95 2xl:h-116 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-3 p-3
+                className="rounded-xl border w-full h-110 sm:h-100 md:h-98  lg:h-95 xl:h-95 2xl:h-138 relative shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-3 p-3
                 "
               >
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full object-contain"
+                  className="w-full h-65 rounded-xl"
                 />
 
-                <h3 className="text-[14px] sm:text-[16px] md:text-[18px]  font-medium tracking-wider text-[#131126]">
+                <h3 className="text-[16px] sm:text-[18px] md:text[20px]  leading-6 md:leading-6 lg:leading-7 font-bold text-[#201C44] tracking-wide">
                   {item.category}
                 </h3>
 
-                <p className="text-[16px] sm:text-[18px] md:text[20px]  leading-6 md:leading-6 lg:leading-7 font-bold text-[#201C44] tracking-wide">
+                <p className="text-[14px] sm:text-[16px] md:text-[18px] font-medium tracking-wider text-[#131126]">
                   {item.description}
                 </p>
 
-                <NavLink to={`/detail/${item.id}`} rel="noopener noreferrer">
+                <NavLink to={`/detail/${item.id}`} rel="noopener noreferrer" className='mt-3'>
                   <button
                     className="items-center absolute bottom-5 flex justify-center w-[50px] h-[50px] border border-[#FAE0E1] text-[#3C3679] rounded-lg hover:bg-[#332d66] hover:text-white transition-all duration-500
               sm:bottom-4 md:bottom-5"

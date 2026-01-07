@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { useEffect } from "react";
 import {
   FaFacebookF,
   FaTwitter,
@@ -8,6 +8,47 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const navItems = [
+    { label: "Platform", section: "features" },
+    { label: "Solutions", section: "streamline" },
+    { label: "Resources", section: "guide" },
+    { label: "Pricing", section: "pricing" },
+  ];
+  const [activeSection, setActiveSection] = useState("features");
+
+  // Scroll on click function
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    window.history.pushState(null, "", `#${id}`);
+    setActiveSection(id);
+  };
+
+  // useEffect
+  useEffect(() => {
+    const handleScrollSpy = () => {
+      navItems.forEach((item) => {
+        const section = document.getElementById(item.section);
+        if (!section) return;
+
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 120 && rect.bottom >= 120) {
+          setActiveSection(item.section);
+          window.history.replaceState(null, "", `#${item.section}`);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScrollSpy);
+    return () => window.removeEventListener("scroll", handleScrollSpy);
+  }, []);
+
   return (
     <div className="w-full flex justify-center items-center">
       <div className="py-3 w-full">
@@ -16,23 +57,20 @@ const Footer = () => {
           className="w-full pb-15 flex justify-end gap-20 pr-10 border-b border-black
     max-lg:gap-10 max-md:gap-6 max-sm:gap-4 max-sm:justify-center max-sm:flex-wrap max-sm:pr-0"
         >
-          {[
-            { to: "/platform", label: "Platform" },
-            { to: "/solutions", label: "Solutions" },
-            { to: "/resources", label: "Resources" },
-            { to: "/pricing", label: "Pricing" },
-          ].map((item, index) => (
-            <NavLink
+          {navItems.map((item, index) => (
+            <button
               key={index}
-              to={item.to}
-              className={({ isActive }) =>
-                `group relative inline-block font-jakarta tracking-wider font-bold text-[16px] pb-1 ${
+              onClick={() => handleScroll(item.section)}
+              className={`group relative inline-block font-jakarta tracking-wider font-bold text-[16px] pb-1
                   isActive ? "text-[#0E265E] " : "text-black "
-                }`
-              }
+                  ${
+                      activeSection === item.section
+                      ? "text-[#256AF4]"
+                      : "text-black hover:text-[#256AF4]"
+                  }`}
             >
               {item.label}
-            </NavLink>
+            </button>
           ))}
         </div>
 

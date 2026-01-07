@@ -9,7 +9,7 @@ const ClientPortal = () => {
     {title: "✔ GPS + QR patrol tracking"},
   ]
   return (
-    <div className=" pt-16 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
+    <div className=" py-10 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
       <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
         {/* For Details Section */}
         <div 

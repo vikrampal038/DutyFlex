@@ -24,7 +24,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="pt-5 flex flex-col justify-center items-center gap-8">
+    <div className=" flex flex-col justify-center items-center gap-15">
       {/* for hero Details */}
       <div className="grid justify-items-center items-center lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1  gap-8 sm:gap-10">
         {/* for Details Section */}
@@ -55,6 +55,11 @@ const Hero = () => {
           >
             {/* Contact Now */}
             <button
+              onClick={() => {
+                const section = document.getElementById("contact");
+                section?.scrollIntoView({ behavior: "smooth" });
+                window.history.pushState(null, "", "#contact");
+              }}
               className="text-center font-jakarta font-bold text-[14px] sm:text-[16px] md:text-[18px] lg:text-[18px] px-4 py-2 rounded-sm bg-[#FAE0E1]
             hover:bg-[#201C44] hover:text-white transition-all duration-1400
               md:px-5 md:py-3 sm:px-4 sm:py-2"
@@ -98,7 +103,7 @@ const Hero = () => {
 
       {/* Services */}
       <div
-        className="rounded-sm w-full bg-[#3C3679] flex justify-around items-center flex-col  p-10
+        className="rounded-sm w-full bg-[#3C3679] flex justify-around items-center flex-col p-10
       xl:p-8 lg:flex-row lg:gap-10 md:gap-10 sm:gap-6 md:p-6  sm:p-4 gap-4"
         style={{
           boxShadow:
@@ -106,36 +111,35 @@ const Hero = () => {
         }}
       >
         {services.map((service) => (
-        <div
-          key={service.id}
-          className="flex justify-between items-center gap-3 
-      md:gap-4 sm:gap-3 lg:flex-row lg:text-center"
-        >
           <div
-            className="w-[50px] h-[50px] rounded-sm bg-[#FAE0E1] flex justify-center items-center
+            key={service.id}
+            className="flex justify-between items-center gap-3 
+      md:gap-4 sm:gap-3 lg:flex-row lg:text-center"
+          >
+            <div
+              className="w-[50px] h-[50px] rounded-sm bg-[#FAE0E1] flex justify-center items-center
           max-sm:w-10 max-sm:h-10"
-            style={{
-              backgroundColor: service.bg,
-              boxShadow:
-                "rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset",
-            }}
-          >
-            <img
-              className="w-[25px] h-[25px] sm:w-5 sm:h-5"
-              src={service.icon}
-              alt="serviceIcon"
-            />
-          </div>
+              style={{
+                backgroundColor: service.bg,
+                boxShadow:
+                  "rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset",
+              }}
+            >
+              <img
+                className="w-[25px] h-[25px] sm:w-5 sm:h-5"
+                src={service.icon}
+                alt="serviceIcon"
+              />
+            </div>
 
-          <h2
-            className="text-16 md:text-[14px] text-start w-full lg:w-50 xl:w-70  font-Jakarta font-normal leading-5 tracking-wider text-white
+            <h2
+              className="text-16 md:text-[14px] text-start w-full lg:w-50 xl:w-70  font-Jakarta font-normal leading-5 tracking-wider text-white
          "
-          >
-            {service.text}
-          </h2>
-        </div>
+            >
+              {service.text}
+            </h2>
+          </div>
         ))}
-
       </div>
     </div>
   );

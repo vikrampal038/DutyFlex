@@ -1,10 +1,51 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
+  const navItems = [
+    { label: "Platform", section: "features" },
+    { label: "Solutions", section: "streamline" },
+    { label: "Resources", section: "guide" },
+    { label: "Pricing", section: "pricing" },
+  ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("features");
 
+  // Scroll on click function
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    window.history.pushState(null, "", `#${id}`);
+    setActiveSection(id);
+    setIsMenuOpen(false);
+  };
+
+  // useEffect
+  useEffect(() => {
+    const handleScrollSpy = () => {
+      navItems.forEach((item) => {
+        const section = document.getElementById(item.section);
+        if (!section) return;
+
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 120 && rect.bottom >= 120) {
+          setActiveSection(item.section);
+          window.history.replaceState(null, "", `#${item.section}`);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScrollSpy);
+    return () => window.removeEventListener("scroll", handleScrollSpy);
+  }, []);
   return (
     <>
       <nav className=" w-full bg-[#ffffff] flex justify-between items-center py-6 gap-15">
@@ -14,30 +55,27 @@ const Navbar = () => {
             <img
               src="/Assets/Logo/dutyflex-1.png"
               alt="Navbar Logo"
-              className="w-[160px] h-[40px] object-contain hover:scale-110 transition duration-700 ease-in-out"
+              className="w-40 h-10 object-contain hover:scale-110 transition duration-700 ease-in-out"
             />
           </NavLink>
         </div>
 
         {/* For Desktop Menu  */}
         <div className="hidden lg:flex items-center mr-auto gap-12 font-semibold text-base list-none text-white">
-          {[
-            { to: "/platform", label: "Platform" },
-            { to: "/solutions", label: "Solutions" },
-            { to: "/resources", label: "Resources" },
-            { to: "/pricing", label: "Pricing" },
-          ].map((item, index) => (
-            <NavLink
+          {navItems.map((item, index) => (
+            <button
               key={index}
-              to={item.to}
-              className={({ isActive }) =>
-                `font-jakarta tracking-wider font-bold text-[16px] pb-1 transition duration-700 ease-in-out rounded-md ${
-                  isActive ? "text-[#256AF4] " : "text-black "
-                }`
-              }
+              // to={item.to}
+              onClick={() => handleScroll(item.section)}
+              className={`font-jakarta tracking-wider font-bold text-[16px] pb-1 transition duration-700 ease-in-out rounded-md 
+                ${
+                  activeSection === item.section
+                    ? "text-[#256AF4]"
+                    : "text-black hover:text-[#256AF4]"
+                }`}
             >
               {item.label}
-            </NavLink>
+            </button>
           ))}
         </div>
 
@@ -45,17 +83,9 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center">
           <NavLink
             to="/accounts/login"
-            className="
-      font-jakarta text-center tracking-wider font-bold 
-      rounded-sm bg-[#FAE0E1] hover:bg-[#201C44] hover:text-white 
-      transition-all duration-300
-      
-      /* Text size — stable */
-      text-base lg:text-lg
-      
-      /* Padding — stable */
-      px-6 py-2
-    "
+            className="font-jakarta text-center tracking-wider font-bold 
+                       rounded-sm bg-[#FAE0E1] hover:bg-[#201C44] hover:text-white 
+                       transition-all duration-300 text-base lg:text-lg px-6 py-2"
           >
             Login
           </NavLink>
@@ -89,38 +119,32 @@ const Navbar = () => {
 
         {/* For Mobile Menu  */}
         <div
-          className={`absolute lg:hidden top-15 right-4 w-[40%] p2-1 bg-[#FAE0E1] rounded-sm 
-  flex flex-col items-center font-bold text-xl transform duration-700 
-  ease-in-out transition-transform z-40 ${
-    isMenuOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
-  }`}
+          className={`absolute lg:hidden top-15 right-4 w-[40%] p2-1 bg-[#FAE0E1] rounded-sm flex flex-col items-center font-bold text-xl transform duration-700 ease-in-out transition-transform z-40 ${
+            isMenuOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          }`}
           style={{ transition: "transform 0.3s ease, opacity 0.2s ease" }}
         >
-          {[
-            { to: "/platform", label: "Platform" },
-            { to: "/solutions", label: "Solutions" },
-            { to: "/resources", label: "Resources" },
-            { to: "/pricing", label: "Pricing" },
-          ].map((item, index) => (
-            <NavLink
+          {navItems.map((item, index) => (
+            <button
               key={index}
-              to={item.to}
-              onClick={() => setIsMenuOpen(false)}
-              className="font-jakarta tracking-wider inline-block p-3 w-full text-black hover:bg-[#256AF4] hover:text-white text-center  
-        font-bold text-[16px] transition duration-1200 ease-in-out">
+              // to={item.to}
+              onClick={() => handleScroll(item.section)}
+              className={`font-jakarta tracking-wider p-3 w-full text-black hover:bg-[#256AF4] hover:text-white text-center font-bold text-[16px] transition duration-1200 ease-in-out
+                 ${
+                   activeSection === item.section
+                     ? "bg-[#256AF4] text-white"
+                     : "text-black hover:bg-[#256AF4] hover:text-white"
+                 }`}
+            >
               {item.label}
-            </NavLink>
+            </button>
           ))}
 
           {/* Mobile Login Button */}
           <NavLink
             to="/accounts/login"
             onClick={() => setIsMenuOpen(false)}
-            className="
-      mt-2 font-jakarta text-center tracking-wider font-bold  border-t border-t-black 
-       bg-[#FAE0E1] hover:bg-[#256AF4] hover:text-white 
-      transition-all duration-1200 px-6 py-2 w-full text-[16px]
-    "
+            className="mt-2 font-jakarta text-center tracking-wider font-bold  border-t border-t-black bg-[#FAE0E1] hover:bg-[#256AF4] hover:text-white transition-all duration-1200 px-6 py-2 w-full text-[16px]"
           >
             Login
           </NavLink>

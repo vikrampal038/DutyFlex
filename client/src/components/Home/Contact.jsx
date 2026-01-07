@@ -6,7 +6,6 @@ export function Contact() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [service, setService] = useState("");
-
   const [errors, setErrors] = useState({});
 
   // ----------- INIT EMAILJS -----------
@@ -79,11 +78,11 @@ export function Contact() {
   };
 
   return (
-    <div className="py-14 w-full flex justify-center items-center">
+    <div className=" pt-10 pb-20 w-full flex justify-center items-center">
       <div className="w-[95%] md:w-[80%] lg:w-[75%] flex flex-col lg:flex-row justify-center items-center gap-10">
 
         {/* Left Side */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/3">
           <div className="flex flex-col gap-3 sm:gap-5  md:gap-8">
             {/* #A1A1A1 image bg original color  */}
             <div className="bg-[#eeeeee] w-[55px] h-[55px] sm:w-[65px] sm:h-[75px] md:w-[65px] md:h-[75px] lg:w-[85px] lg:h-[85px] flex justify-center items-center rounded-full">
@@ -92,7 +91,6 @@ export function Contact() {
 
             <div className="flex flex-col gap-5">
               <h1 className="text-[20px] sm:text-[25px] md:text-[30px] lg:text-[40]   text-black font-bold font-Gilroy leading-10">
-                 
                 Get a free consultancy from our expert right now!
               </h1>
               <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-medium font-Gilroy leading-7 text-[#7a7a7a]">
@@ -106,7 +104,7 @@ export function Contact() {
         <div className="w-full lg:w-1/2 p-1 flex justify-center">
           <form
             onSubmit={handleSubmit}
-            className="border border-[#E7E9ED] rounded-xl p-5 w-full"
+            className="border border-[#E7E9ED] rounded-xl p-5 w-100"
           >
             <div className="flex flex-col gap-3">
 
@@ -161,7 +159,7 @@ export function Contact() {
               </div>
 
               {/* Service */}
-              <div className="flex flex-col gap-1">
+              {/* <div className="flex flex-col gap-1">
                 <label className="text-[#161C2D] text-[15px] font-bold font-Gilroy">
                   Which service do you need?
                 </label>
@@ -182,7 +180,7 @@ export function Contact() {
                 {errors.service && (
                   <small className="text-red-600">{errors.service}</small>
                 )}
-              </div>
+              </div> */}
             </div>
 
             <div className="flex justify-center mt-5 bg-[#142965] p-3 rounded-lg cursor-pointer">
