@@ -60,7 +60,7 @@ const Hero = () => {
                 section?.scrollIntoView({ behavior: "smooth" });
                 window.history.pushState(null, "", "#contact");
               }}
-              className="text-center font-jakarta font-bold text-[14px] sm:text-[16px] md:text-[18px] lg:text-[18px] px-4 py-2 rounded-sm bg-[#FAE0E1]
+              className="text-center font-jakarta font-bold text-[14px] sm:text-[16px]  px-4 py-2 rounded-sm bg-[#FAE0E1]
             hover:bg-[#201C44] hover:text-white transition-all duration-1400
               md:px-5 md:py-3 sm:px-4 sm:py-2"
             >
@@ -71,14 +71,14 @@ const Hero = () => {
             <button
               className="text-center px-4 py-2 text-[14px] text-[#201C44] rounded-sm bg-white border
           hover:bg-[#201C44] hover:text-white transition-all duration-1400
-          max-md:px-5 max-md:py-3 max-sm:px-4 max-sm:py-2"
+          md:px-5 md:py-3 sm:px-4 sm:py-2"
             >
               <FaChevronRight size={22} />
             </button>
 
             {/* Book a Demo */}
             <button
-              className=" text-center font-jakarta font-bold text-[14px] sm:text-[16px] md:text-[18px] lg:text-[18px] px-4 py-2 rounded-sm border border-black
+              className=" text-center font-jakarta font-bold text-[14px] sm:text-[16px]] px-4 py-2 rounded-sm border border-black
           hover:bg-[#201C44] hover:text-white transition-all duration-1400
               md:px-5 md:py-3 sm:px-4 sm:py-2"
             >

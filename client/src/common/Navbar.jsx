@@ -46,6 +46,7 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScrollSpy);
     return () => window.removeEventListener("scroll", handleScrollSpy);
   }, []);
+  
   return (
     <>
       <nav className=" w-full bg-[#ffffff] flex justify-between items-center py-6 gap-15">
@@ -119,7 +120,7 @@ const Navbar = () => {
 
         {/* For Mobile Menu  */}
         <div
-          className={`absolute lg:hidden top-15 right-4 w-[40%] p2-1 bg-[#FAE0E1] rounded-sm flex flex-col items-center font-bold text-xl transform duration-700 ease-in-out transition-transform z-40 ${
+          className={`absolute lg:hidden top-14 right-4 w-[40%] p-2 bg-[#FAE0E1] rounded-sm flex flex-col items-center font-bold text-xl transform duration-700 ease-in-out transition-transform z-40 ${
             isMenuOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
           style={{ transition: "transform 0.3s ease, opacity 0.2s ease" }}

@@ -13,17 +13,36 @@ const Home = ({ heroRef }) => {
   return (
     <>
       <div>
-        <Hero id="hero" className="scroll-mt-[100px]" ref={heroRef} />
-        <Features id="features" ref={heroRef} />
+        <section id="hero" className="scroll-mt-[100px]" ref={heroRef}>
+          <Hero />
+        </section>
+
+       <section id="features" ref={heroRef}>
+         <Features />
+       </section>
+
         {/* <Services id="service" ref={heroRef} /> */}
-        <Streamline id="streamline" ref={heroRef} />
-        <Guide id="guide" ref={heroRef} />
-        <ClientPortal id="features" ref={heroRef} />
+
+        <section id="streamline" ref={heroRef}>
+          <Streamline  />
+        </section>
+
+        <section id="guide" ref={heroRef}>
+          <Guide  />
+        </section>
+
+        <section id="features" ref={heroRef}>
+          <ClientPortal  />
+        </section>
+
         {/* <section id="faqs" ref={heroRef}>
           <Heading ref={heroRef} />
           <MyAccordion ref={heroRef} />
         </section> */}
-        <Contact id="contact" ref={heroRef} />
+
+        <section id="contact" ref={heroRef}>
+          <Contact  />
+          </section>
       </div>
     </>
   );
