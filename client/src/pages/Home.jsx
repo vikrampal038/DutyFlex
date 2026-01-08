@@ -5,6 +5,7 @@ import Streamline from "../components/Home/Streamline";
 import Guide from "../components/Home/Guide";
 import Contact from "../components/Home/Contact.jsx";
 import ClientPortal from "../components/Home/ClientPortal .jsx";
+// import Service from "../components/Home/Services.jsx"
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
       <div>
         <Hero id="hero" className="scroll-mt-[100px]"></Hero> />
         <Features id="features" />
-        <Services id="service" />
+        {/* <Services id="service" /> */}
         <Streamline id="streamline" />
         <Guide id="guide" />
         <ClientPortal id="features" />
