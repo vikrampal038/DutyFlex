@@ -5,13 +5,15 @@ import Streamline from "../components/Home/Streamline";
 import Guide from "../components/Home/Guide";
 import Contact from "../components/Home/Contact.jsx";
 import ClientPortal from "../components/Home/ClientPortal .jsx";
-// import Service from "../components/Home/Services.jsx"
+// import Service from "../components/Home/Services.jsx";
+// import Heading from "../components/Home/Faqs/Heading.jsx";
+// import MyAccordion from "../components/Home/Faqs/MyAccordion.jsx";
 
 const Home = () => {
   return (
     <>
       <div>
-        <Hero id="hero" className="scroll-mt-[100px]"></Hero> />
+        <Hero id="hero" className="scroll-mt-[100px]" />
         <Features id="features" />
         {/* <Services id="service" /> */}
         <Streamline id="streamline" />
