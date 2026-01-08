@@ -54,7 +54,7 @@ const ClientPortal = () => {
         <div className="relative flex justify-center items-center w-full lg:w-1/2 mt-10">
           <img
             className=" w-full sm:w-[550px] md:w-[650px] lg:w-[600px] h-auto"
-            src="/Assets/All Images/image 22.png"
+            src="/Assets/All Images/Client.png"
             alt="streamline image"
           />
         </div>

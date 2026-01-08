@@ -95,7 +95,7 @@ const Hero = () => {
             max-lg:w-[850px] max-lg:h-[500px]
             max-md:w-[700px] max-md:h-[450px]
             max-sm:w-[450px] max-sm:h-[400px]"
-            src="/Assets/All Images/image 19.png"
+            src="/Assets/All Images/Hero.png"
             alt="hero section img"
           />
         </div>
