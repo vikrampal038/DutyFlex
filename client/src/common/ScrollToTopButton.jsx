@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import { ArrowUp } from "lucide-react";
 import { PiArrowBendRightUpBold } from "react-icons/pi";
 
 const ScrollToTopButton = () => {
@@ -7,35 +6,35 @@ const ScrollToTopButton = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShow(window.scrollY > 300);
+      setShow(window.pageYOffset > 300);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToHero = () => {
-    const hero = document.getElementById("hero");
-    hero?.scrollIntoView({
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
       behavior: "smooth",
-      block: "start",
     });
   };
 
-  if (!show) return null;
-
   return (
     <button
-      onClick={scrollToHero}
-      className="fixed bottom-6 right-6 z-50 
-      bg-[#256AF4] text-white 
-      p-2 rounded-full shadow-lg
-      hover:scale-110 transition-all duration-300"
+      onClick={scrollToTop}
       aria-label="Back to top"
+      className={`
+        fixed bottom-6 right-6 z-999
+        bg-[#256AF4] text-white
+        p-3 rounded-full shadow-lg
+        transition-all duration-500 ease-out
+        ${show 
+          ? "opacity-100 translate-y-0 scale-100 pointer-events-auto" 
+          : "opacity-0 translate-y-6 scale-90 pointer-events-none"}
+      `}
     >
-      {/* <ArrowUp size={22} /> */}
       <PiArrowBendRightUpBold size={22} />
-      
     </button>
   );
 };

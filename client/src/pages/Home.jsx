@@ -9,21 +9,21 @@ import ClientPortal from "../components/Home/ClientPortal .jsx";
 // import Heading from "../components/Home/Faqs/Heading.jsx";
 // import MyAccordion from "../components/Home/Faqs/MyAccordion.jsx";
 
-const Home = () => {
+const Home = ({ heroRef }) => {
   return (
     <>
       <div>
-        <Hero id="hero" className="scroll-mt-[100px]" />
-        <Features id="features" />
-        {/* <Services id="service" /> */}
-        <Streamline id="streamline" />
-        <Guide id="guide" />
-        <ClientPortal id="features" />
-        {/* <section id="faqs">
-          <Heading />
-          <MyAccordion />
+        <Hero id="hero" className="scroll-mt-[100px]" ref={heroRef} />
+        <Features id="features" ref={heroRef} />
+        {/* <Services id="service" ref={heroRef} /> */}
+        <Streamline id="streamline" ref={heroRef} />
+        <Guide id="guide" ref={heroRef} />
+        <ClientPortal id="features" ref={heroRef} />
+        {/* <section id="faqs" ref={heroRef}>
+          <Heading ref={heroRef} />
+          <MyAccordion ref={heroRef} />
         </section> */}
-        <Contact id="contact" />
+        <Contact id="contact" ref={heroRef} />
       </div>
     </>
   );

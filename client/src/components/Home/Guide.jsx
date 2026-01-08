@@ -10,7 +10,7 @@ const Guide = () => {
         {/* Mobile Image */}
         <div className="w-full flex justify-center items-center lg:w-1/2 ">
           <img
-            className="w-[300px] sm:w-[350px] md:w-[350px] lg:w-[400px]  object-contain"
+            className="w-[230px] sm:w-[270px] md:w-[320px]  object-contain"
             src="/Assets/Guide/image 21.png"
             alt="guide mobile image"
           />

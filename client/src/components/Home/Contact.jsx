@@ -184,7 +184,7 @@ export function Contact() {
             </div>
 
             <div className="flex justify-center mt-5 bg-[#142965] p-3 rounded-lg cursor-pointer">
-              <button className="text-white text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-bold font-Gilroy" type="submit">
+              <button className="text-white text-[14px] sm:text-[16px] md:text-[18px] font-semibold tracking-wider font-Gilroy" type="submit">
                 Get Free Consultancy
               </button>
             </div>

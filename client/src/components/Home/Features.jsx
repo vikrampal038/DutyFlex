@@ -20,7 +20,7 @@ const Features = () => {
             {FeatureData.map((item, index) => (
               <div
                 key={index}
-                className="rounded-xl border w-full h-110 sm:h-100 md:h-98  lg:h-95 xl:h-95 2xl:h-138 relative shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-3 p-3
+                className="rounded-xl border w-full h-110 sm:h-100 md:h-98  lg:h-95 xl:h-95 2xl:h-132 relative shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-3 p-3
                 "
               >
                 <img
@@ -33,7 +33,7 @@ const Features = () => {
                   {item.category}
                 </h3>
 
-                <p className="text-[14px] sm:text-[16px] md:text-[18px] font-medium tracking-wider text-[#131126]">
+                <p className="text-[14px] sm:text-[16px] md:text-[16px] font-medium tracking-wider text-[#131126]">
                   {item.description}
                 </p>
 
