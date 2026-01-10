@@ -2,8 +2,8 @@ import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Home from '../pages/Home'
 import ScrollToTop from '../common/ScrollToTop'
-import Accounts from '../components/Accounts/Accounts'
-import FeaturesDetails from '../pages/FeaturesDetails'
+// import Accounts from '../components/Accounts/Accounts'
+// import FeaturesDetails from '../pages/FeaturesDetails'
 
 const Mainrouter = ({ heroRef }) => {
   return (
