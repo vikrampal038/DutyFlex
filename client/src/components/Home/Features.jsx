@@ -40,8 +40,8 @@ const Features = () => {
                 </p>
 
                 <NavLink
-                  to={`/detail/${item.id}`}
-                  rel="noopener noreferrer"
+                  // to={`/detail/${item.id}`}
+                  // rel="noopener noreferrer"
                   className="mt-3"
                 >
                   <button
