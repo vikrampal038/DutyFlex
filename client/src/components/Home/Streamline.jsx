@@ -81,12 +81,16 @@ const Streamline = () => {
             className="absolute bottom-66 sm:bottom-100 md:bottom-110 lg:bottom-85 xl:bottom-134   left-72 sm:left-125 md:left-145 lg:left-90 xl:left-155 w-10 sm:w-18 md:w-[70px] lg:w-[75px]"
             src="/Assets/All Images/Group.png"
             alt="stramline logo"
+            loading="eager"
+            fetchPriority="high"
           />
 
           <img
             className=" w-[35 0px] sm:w-[400px] md:w-[450px] lg:w-[500px] xl:w-[550px] rounded-2xl"
             src="Assets/All Images/Stramline.png"
             alt="streamline image"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
       </div>

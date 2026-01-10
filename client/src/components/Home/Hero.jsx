@@ -97,6 +97,8 @@ const Hero = () => {
             max-sm:w-[450px] max-sm:h-[400px]"
             src="/Assets/All Images/Hero.png"
             alt="hero section img"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
       </div>
@@ -129,6 +131,8 @@ const Hero = () => {
                 className="w-[25px] h-[25px] sm:w-5 sm:h-5 md:w-7 md:h-7"
                 src={service.icon}
                 alt="serviceIcon"
+                loading="eager"
+                fetchPriority="high"
               />
             </div>
 

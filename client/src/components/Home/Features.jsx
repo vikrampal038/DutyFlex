@@ -26,6 +26,8 @@ const Features = () => {
                 <img
                   src={item.image}
                   alt={item.title}
+                  loading="eager"
+                  fetchPriority="high"
                   className="w-full h-65 rounded-xl"
                 />
 
@@ -37,7 +39,11 @@ const Features = () => {
                   {item.description}
                 </p>
 
-                <NavLink to={`/detail/${item.id}`} rel="noopener noreferrer" className='mt-3'>
+                <NavLink
+                  to={`/detail/${item.id}`}
+                  rel="noopener noreferrer"
+                  className="mt-3"
+                >
                   <button
                     className="items-center absolute bottom-5 flex justify-center w-[50px] h-[50px] border border-[#FAE0E1] text-[#3C3679] rounded-lg hover:bg-[#332d66] hover:text-white transition-all duration-500
               sm:bottom-4 md:bottom-5"

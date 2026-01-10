@@ -13,6 +13,8 @@ const Guide = () => {
             className="w-[230px] sm:w-[270px] md:w-[320px]  object-contain"
             src="/Assets/Guide/image 21.png"
             alt="guide mobile image"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
 
@@ -20,9 +22,7 @@ const Guide = () => {
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-8 px-2 sm:px-4 ">
           {/* Heading */}
           <div className="w-full text-center lg:text-start flex flex-col gap-4">
-            <h1
-              className="font-jakarta text-[20px] sm:text-[25px] md:text-[30px] lg:text-[40] w-full font-bold text-[#201C44] leading-8 sm:leading-10 md:leading-12 "
-            >
+            <h1 className="font-jakarta text-[20px] sm:text-[25px] md:text-[30px] lg:text-[40] w-full font-bold text-[#201C44] leading-8 sm:leading-10 md:leading-12 ">
               Guided Mobile App Tour
             </h1>
 
@@ -49,6 +49,8 @@ const Guide = () => {
                     className="w-5 h-6 sm:w-6 sm:h-7 md:w-7 md:h-8"
                     src={item.image}
                     alt="guide-icon"
+                    loading="eager"
+                    fetchPriority="high"
                   />
                 </div>
 

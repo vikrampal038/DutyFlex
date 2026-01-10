@@ -95,7 +95,12 @@ export function Contact() {
         <div className="w-full lg:w-1/3">
           <div className="flex flex-col gap-5">
             <div className="bg-[#eeeeee] w-[65px] h-[65px] flex justify-center items-center rounded-full">
-              <img src="/Assets/All Images/Path.png" alt="contact icon" />
+              <img
+                src="/Assets/All Images/Path.png"
+                alt="contact icon"
+                loading="eager"
+                fetchPriority="high"
+              />
             </div>
 
             <h1 className="text-[24px] md:text-[32px] font-bold text-black">
@@ -122,7 +127,7 @@ export function Contact() {
                   Name
                 </label>
                 <input
-                id="name"
+                  id="name"
                   className="w-full border rounded-md py-2 px-3"
                   type="text"
                   placeholder="John Doe"
@@ -145,7 +150,7 @@ export function Contact() {
                   Email
                 </label>
                 <input
-                id="email"
+                  id="email"
                   className="w-full border rounded-md py-2 px-3"
                   type="email"
                   name="email"
@@ -164,7 +169,7 @@ export function Contact() {
                   Phone
                 </label>
                 <input
-                id="phone"
+                  id="phone"
                   className="w-full border rounded-md py-2 px-3"
                   type="tel"
                   name="phone"

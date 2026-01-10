@@ -4,17 +4,15 @@ import { FaChevronRight } from "react-icons/fa6";
 
 const ClientPortal = () => {
   const ClientList = [
-    {title: "✔ Real-time dashboard"},
-    {title: "✔ Smart shift scheduling"},
-    {title: "✔ GPS + QR patrol tracking"},
-  ]
+    { title: "✔ Real-time dashboard" },
+    { title: "✔ Smart shift scheduling" },
+    { title: "✔ GPS + QR patrol tracking" },
+  ];
   return (
     <div className=" py-10 flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-10">
       <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
         {/* For Details Section */}
-        <div 
-        
-        className="flex flex-col justify-start items-start gap-[25px] w-full lg:w-1/2">
+        <div className="flex flex-col justify-start items-start gap-[25px] w-full lg:w-1/2">
           <h1 className="font-jakarta text-[20px] sm:text-[25px] md:text-[30px] lg:text-[40] w-full font-bold text-[#201C44] leading-8 sm:leading-10 md:leading-12 ">
             DutyFlex Client Portal Simplify Real-Time Guard Management Anywhere,
             Anytime
@@ -26,14 +24,14 @@ const ClientPortal = () => {
             one seamless walkthrough.
           </p>
 
-
           <div className="flex flex-col justify-start gap-4">
             {ClientList.map((item, index) => (
-            <p
-             key={index}
-            className="text-[14px] sm:text-[16px] md:text-[18px]  tracking-wider text-black font-normal font-manrope">
-              {item.title}
-            </p>
+              <p
+                key={index}
+                className="text-[14px] sm:text-[16px] md:text-[18px]  tracking-wider text-black font-normal font-manrope"
+              >
+                {item.title}
+              </p>
             ))}
           </div>
 
@@ -56,6 +54,8 @@ const ClientPortal = () => {
             className=" w-full sm:w-[550px] md:w-[650px] lg:w-[600px] h-auto"
             src="/Assets/All Images/Client.png"
             alt="streamline image"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
       </div>

@@ -12,11 +12,11 @@ const Footer = () => {
     { label: "Platform", section: "features" },
     { label: "Solutions", section: "streamline" },
     { label: "Resources", section: "guide" },
-    { label: "Pricing", section: "pricing" },
+    // { label: "Pricing", section: "pricing" },
   ];
   const [activeSection, setActiveSection] = useState("features");
 
-  // Scroll on click function
+  // 🔹 Scroll on click (NO URL CHANGE)
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (!section) return;
@@ -26,11 +26,11 @@ const Footer = () => {
       block: "start",
     });
 
-    window.history.pushState(null, "", `#${id}`);
     setActiveSection(id);
+    setIsMenuOpen(false);
   };
 
-  // useEffect
+  // 🔹 Scroll Spy (active menu highlight only)
   useEffect(() => {
     const handleScrollSpy = () => {
       navItems.forEach((item) => {
@@ -40,13 +40,19 @@ const Footer = () => {
         const rect = section.getBoundingClientRect();
         if (rect.top <= 120 && rect.bottom >= 120) {
           setActiveSection(item.section);
-          window.history.replaceState(null, "", `#${item.section}`);
         }
       });
     };
 
     window.addEventListener("scroll", handleScrollSpy);
     return () => window.removeEventListener("scroll", handleScrollSpy);
+  }, []);
+
+  // 🔹 HARD SAFETY: remove hash if browser adds it
+  useEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
   }, []);
 
   return (
@@ -64,7 +70,7 @@ const Footer = () => {
               className={`group relative inline-block font-jakarta tracking-wider font-bold text-[16px] pb-1
                   isActive ? "text-[#0E265E] " : "text-black "
                   ${
-                      activeSection === item.section
+                    activeSection === item.section
                       ? "text-[#256AF4]"
                       : "text-black hover:text-[#256AF4]"
                   }`}

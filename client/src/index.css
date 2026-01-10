@@ -119,6 +119,11 @@
   
 }
 
+body {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
 /* FAQ animation  code  */
 
 /* FAQ animation keyframes */

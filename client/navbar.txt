@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
@@ -7,12 +8,12 @@ const Navbar = () => {
     { label: "Platform", section: "features" },
     { label: "Solutions", section: "streamline" },
     { label: "Resources", section: "guide" },
+    // { label: "Pricing", section: "pricing" },
   ];
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("features");
 
-  // 🔹 Scroll on click (NO URL CHANGE)
+  // Scroll on click function
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (!section) return;
@@ -22,11 +23,12 @@ const Navbar = () => {
       block: "start",
     });
 
+    // window.history.pushState(null, "", `#${id}`);
     setActiveSection(id);
     setIsMenuOpen(false);
   };
 
-  // 🔹 Scroll Spy (active menu highlight only)
+  // useEffect
   useEffect(() => {
     const handleScrollSpy = () => {
       navItems.forEach((item) => {
@@ -36,6 +38,7 @@ const Navbar = () => {
         const rect = section.getBoundingClientRect();
         if (rect.top <= 120 && rect.bottom >= 120) {
           setActiveSection(item.section);
+          // window.history.replaceState(null, "", `#${item.section}`);
         }
       });
     };
@@ -43,14 +46,7 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScrollSpy);
     return () => window.removeEventListener("scroll", handleScrollSpy);
   }, []);
-
-  // 🔹 HARD SAFETY: remove hash if browser adds it
-  useEffect(() => {
-    if (window.location.hash) {
-      window.history.replaceState(null, "", window.location.pathname);
-    }
-  }, []);
-
+  
   return (
     <>
       <nav className=" w-full bg-[#ffffff] flex justify-between items-center py-6 gap-15">
@@ -60,8 +56,6 @@ const Navbar = () => {
             <img
               src="/Assets/Logo/dutyflex-1.png"
               alt="Navbar Logo"
-              loading="eager"
-              fetchPriority="high"
               className="w-40 h-10 object-contain hover:scale-110 transition duration-700 ease-in-out"
             />
           </NavLink>
@@ -69,9 +63,10 @@ const Navbar = () => {
 
         {/* For Desktop Menu  */}
         <div className="hidden lg:flex items-center mr-auto gap-12 font-semibold text-base list-none text-white">
-          {navItems.map((item) => (
+          {navItems.map((item, index) => (
             <button
-              key={item.section}
+              key={index}
+              // to={item.to}
               onClick={() => handleScroll(item.section)}
               className={`font-jakarta tracking-wider font-bold text-[16px] pb-1 transition duration-700 ease-in-out rounded-md 
                 ${
@@ -130,9 +125,10 @@ const Navbar = () => {
           }`}
           style={{ transition: "transform 0.3s ease, opacity 0.2s ease" }}
         >
-          {navItems.map((item) => (
+          {navItems.map((item, index) => (
             <button
-              key={item.section}
+              key={index}
+              // to={item.to}
               onClick={() => handleScroll(item.section)}
               className={`font-jakarta tracking-wider p-3 w-full text-black hover:bg-[#256AF4] hover:text-white text-center font-bold text-[16px] transition duration-1200 ease-in-out
                  ${
