@@ -10,8 +10,8 @@ const Mainrouter = ({ heroRef }) => {
       <div>
         <Routes>
           <Route path='/' element={<Home heroRef={heroRef} />} />
-          <Route path='/accounts/:page' element={<Accounts />} />
-          <Route path='/detail/:id' element={<FeaturesDetails />} />
+          {/* <Route path='/accounts/:page' element={<Accounts />} />
+          <Route path='/detail/:id' element={<FeaturesDetails />} /> */}
         </Routes>
       </div>
     </>

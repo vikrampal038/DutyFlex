@@ -5,6 +5,7 @@ import Streamline from "../components/Home/Streamline";
 import Guide from "../components/Home/Guide";
 import Contact from "../components/Home/Contact.jsx";
 import ClientPortal from "../components/Home/ClientPortal .jsx";
+// import Pricing from "../components/Home/Pricing.jsx";
 // import Service from "../components/Home/Services.jsx";
 // import Heading from "../components/Home/Faqs/Heading.jsx";
 // import MyAccordion from "../components/Home/Faqs/MyAccordion.jsx";
@@ -17,23 +18,27 @@ const Home = ({ heroRef }) => {
           <Hero />
         </section>
 
-       <section id="features" ref={heroRef}>
-         <Features />
-       </section>
+        <section id="features" ref={heroRef}>
+          <Features />
+        </section>
 
         {/* <Services id="service" ref={heroRef} /> */}
 
         <section id="streamline" ref={heroRef}>
-          <Streamline  />
+          <Streamline />
         </section>
 
         <section id="guide" ref={heroRef}>
-          <Guide  />
+          <Guide />
         </section>
 
         <section id="features" ref={heroRef}>
-          <ClientPortal  />
+          <ClientPortal />
         </section>
+
+        {/* <section id="guide" ref={heroRef}>
+          <Pricing />
+        </section> */}
 
         {/* <section id="faqs" ref={heroRef}>
           <Heading ref={heroRef} />
@@ -41,8 +46,8 @@ const Home = ({ heroRef }) => {
         </section> */}
 
         <section id="contact" ref={heroRef}>
-          <Contact  />
-          </section>
+          <Contact />
+        </section>
       </div>
     </>
   );

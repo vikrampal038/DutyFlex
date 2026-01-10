@@ -126,7 +126,7 @@ const Hero = () => {
               }}
             >
               <img
-                className="w-[25px] h-[25px] sm:w-5 sm:h-5"
+                className="w-[25px] h-[25px] sm:w-5 sm:h-5 md:w-7 md:h-7"
                 src={service.icon}
                 alt="serviceIcon"
               />

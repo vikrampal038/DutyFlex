@@ -8,7 +8,7 @@ const Navbar = () => {
     { label: "Platform", section: "features" },
     { label: "Solutions", section: "streamline" },
     { label: "Resources", section: "guide" },
-    { label: "Pricing", section: "pricing" },
+    // { label: "Pricing", section: "pricing" },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("features");
