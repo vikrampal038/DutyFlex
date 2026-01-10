@@ -1,8 +1,7 @@
 import React from "react";
 import { FeatureData } from "../../data/FeatureData";
-
-import { AiOutlineDown } from "react-icons/ai"; // Ant Design
-import { NavLink } from "react-router-dom";
+// import { AiOutlineDown } from "react-icons/ai"; // Ant Design
+// import { NavLink } from "react-router-dom";
 const Features = () => {
   return (
     <>
@@ -20,7 +19,8 @@ const Features = () => {
             {FeatureData.map((item, index) => (
               <div
                 key={index}
-                className="rounded-xl border w-full h-110 sm:h-100 md:h-98  lg:h-95 xl:h-95 2xl:h-132 relative shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-3 p-3
+                // 2xl:h-132
+                className="rounded-xl border w-full h-110 sm:h-100 md:h-98  lg:h-95 xl:h-95 2xl:h-118 relative shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-3 p-3
                 "
               >
                 <img
@@ -38,7 +38,7 @@ const Features = () => {
                 <p className="text-[14px] sm:text-[16px] md:text-[16px] font-medium tracking-wider text-[#131126]">
                   {item.description}
                 </p>
-
+{/* 
                 <NavLink
                   // to={`/detail/${item.id}`}
                   // rel="noopener noreferrer"
@@ -50,7 +50,7 @@ const Features = () => {
                   >
                     <AiOutlineDown size={24} />
                   </button>
-                </NavLink>
+                </NavLink> */}
               </div>
             ))}
           </div>
